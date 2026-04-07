@@ -227,6 +227,24 @@ def create_leaderboard_tab(task_id, language_code, mt_pair=None):
 
 def create_submission_tab():
     """Create the submission tab with file upload, preview, and metadata fields."""
+
+    with gr.Row():
+        with gr.Column():
+            login_btn = gr.LoginButton(elem_id="oauth-button")
+            login_status = gr.Markdown(
+                "*Not logged in / Non connecté*",
+                elem_classes="guide-text",
+            )
+
+    def show_login_status(profile: gr.OAuthProfile = None):
+        if profile is None:
+            return ("*🔒 Not logged in — please log in above to submit. / "
+                    "Non connecté — veuillez vous connecter ci-dessus pour soumettre.*")
+        return (f"*✅ Logged in as **{profile.username}** — you can submit results. / "
+                f"Connecté en tant que **{profile.username}** — vous pouvez soumettre.*")
+
+    demo.load(show_login_status, inputs=[], outputs=[login_status])
+
     with gr.Row():
         with gr.Column(scale=1):
             json_upload = gr.File(
@@ -388,7 +406,7 @@ with demo:
 
 if os.environ.get("SPACE_ID"):
     scheduler = BackgroundScheduler()
-    scheduler.add_job(restart_space, "interval", seconds=1800)
+    scheduler.add_job(restart_space, "interval", seconds=3600)
     scheduler.start()
 
 demo.launch(
