@@ -13,22 +13,68 @@ custom_css = """
     --goai-bronze: #CD7F32;
 }
 
-/* Force light mode — full width */
-.gradio-container {
-    background: #ffffff !important;
-    color: #1a1a1a !important;
-}
-.dark .gradio-container,
-.dark {
+/* ===== Force light mode everywhere ===== */
+body,
+body.dark,
+.gradio-container,
+.dark .gradio-container {
     background: #ffffff !important;
     color: #1a1a1a !important;
 }
 
-/* Header — white background */
+/* Force all text to be dark on white — covers dark-mode browsers */
+.gradio-container *,
+.dark .gradio-container * {
+    --body-text-color: #1a1a1a !important;
+    --block-label-text-color: #333 !important;
+    --block-title-text-color: #1a1a1a !important;
+    --input-text-color: #1a1a1a !important;
+}
+.gradio-container p,
+.gradio-container span,
+.gradio-container li,
+.gradio-container label,
+.gradio-container .prose,
+.gradio-container .markdown,
+.dark .gradio-container p,
+.dark .gradio-container span,
+.dark .gradio-container li,
+.dark .gradio-container label,
+.dark .gradio-container .prose,
+.dark .gradio-container .markdown {
+    color: #1a1a1a !important;
+}
+.gradio-container strong,
+.dark .gradio-container strong {
+    color: var(--goai-blue) !important;
+}
+.gradio-container em,
+.dark .gradio-container em {
+    color: #333 !important;
+}
+.gradio-container a,
+.dark .gradio-container a {
+    color: var(--goai-blue) !important;
+}
+
+/* All panels/blocks white background */
+.gradio-container .block,
+.gradio-container .panel,
+.gradio-container .form,
+.gradio-container .tabitem,
+.dark .gradio-container .block,
+.dark .gradio-container .panel,
+.dark .gradio-container .form,
+.dark .gradio-container .tabitem {
+    background: #ffffff !important;
+    border-color: #e0e0e0 !important;
+}
+
+/* ===== Header — white background ===== */
 .goai-header {
     text-align: center;
     padding: 28px 30px 20px 30px;
-    background: #ffffff;
+    background: #ffffff !important;
     border-bottom: 3px solid var(--goai-blue);
     margin-bottom: 20px;
 }
@@ -39,7 +85,7 @@ custom_css = """
     margin: 0 0 6px 0;
 }
 .goai-header .goai-subtitle {
-    color: #444;
+    color: #444 !important;
     font-size: 15px;
     max-width: 800px;
     margin: 4px auto;
@@ -66,49 +112,60 @@ custom_css = """
     width: auto;
 }
 
-/* Tab styling — centered */
-.tab-buttons {
-    display: flex;
+/* ===== Tab styling — centered labels ===== */
+/* Target Gradio's internal tablist container at every nesting level */
+.tab-buttons > div,
+.tab-buttons [role="tablist"],
+.tabs > .tab-nav,
+div.tabs > div.tab-nav,
+div.tabitem .tabs > .tab-nav,
+.gradio-container .tabs > .tab-nav {
     justify-content: center !important;
+    display: flex !important;
 }
-.tab-buttons > div {
-    display: flex;
-    justify-content: center !important;
-}
-.tab-buttons button {
+.tab-buttons button,
+.tabs > .tab-nav > button {
     font-size: 15px !important;
-    font-weight: 600;
+    font-weight: 600 !important;
     border-radius: 8px 8px 0 0 !important;
-    color: #555 !important;
+    color: #444 !important;
     background: transparent !important;
     border-bottom: 2px solid transparent !important;
     padding: 10px 18px !important;
 }
-.tab-buttons button:hover {
+.tab-buttons button:hover,
+.tabs > .tab-nav > button:hover {
     color: var(--goai-blue) !important;
     background: rgba(21,101,192,0.04) !important;
 }
-.tab-buttons button.selected {
+.tab-buttons button.selected,
+.tabs > .tab-nav > button.selected {
     background: rgba(21,101,192,0.08) !important;
     color: var(--goai-blue) !important;
     border-bottom: 3px solid var(--goai-yellow) !important;
 }
 
-/* Guide text blocks between tabs */
+/* ===== Guide text blocks ===== */
 .guide-text {
     font-size: 14px !important;
-    padding: 12px 16px;
-    background: linear-gradient(90deg, rgba(21,101,192,0.05) 0%, rgba(255,193,7,0.04) 100%);
-    border-left: 4px solid var(--goai-blue);
-    border-radius: 0 8px 8px 0;
-    margin: 8px 0 12px 0;
-    color: #333;
+    padding: 12px 16px !important;
+    background: #f0f4fa !important;
+    border-left: 4px solid var(--goai-blue) !important;
+    border-radius: 0 8px 8px 0 !important;
+    margin: 8px 0 12px 0 !important;
+    color: #222 !important;
+}
+.guide-text p,
+.guide-text span,
+.guide-text em,
+.guide-text li {
+    color: #222 !important;
 }
 .guide-text strong {
-    color: var(--goai-blue);
+    color: var(--goai-blue) !important;
 }
 
-/* Gold/Silver/Bronze highlighting */
+/* ===== Gold/Silver/Bronze highlighting ===== */
 #llm-benchmark-tab-table table tbody tr:nth-child(1) {
     background: rgba(255, 215, 0, 0.12) !important;
 }
@@ -119,7 +176,7 @@ custom_css = """
     background: rgba(205, 127, 50, 0.12) !important;
 }
 
-/* Table headers */
+/* ===== Table ===== */
 table th {
     background: var(--goai-blue) !important;
     color: white !important;
@@ -131,6 +188,7 @@ table td {
     font-size: 13px !important;
     padding: 8px !important;
     color: #222 !important;
+    background: #ffffff !important;
 }
 table td:first-child,
 table th:first-child {
@@ -138,24 +196,9 @@ table th:first-child {
     text-align: center;
 }
 
-/* Buttons */
-.goai-btn {
-    background: var(--goai-blue) !important;
-    color: white !important;
-    border: none !important;
-    border-radius: 8px !important;
-    padding: 10px 24px !important;
-    font-weight: 600 !important;
-    font-size: 14px !important;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-.goai-btn:hover {
-    background: var(--goai-yellow) !important;
-    color: var(--goai-blue-dark) !important;
-}
+/* (buttons styled below with OAuth section) */
 
-/* Filter sections */
+/* ===== Filter sections ===== */
 .filter-row {
     display: flex;
     flex-wrap: wrap;
@@ -168,19 +211,19 @@ table th:first-child {
     min-width: 160px;
 }
 
-/* Preview card */
+/* ===== Preview card ===== */
 .preview-card {
     border: 2px solid var(--goai-blue);
     border-radius: 12px;
     overflow: hidden;
     margin: 12px 0;
-    background: #ffffff;
-    color: #222;
+    background: #ffffff !important;
+    color: #222 !important;
 }
 .preview-header {
     background: linear-gradient(135deg, var(--goai-blue) 0%, var(--goai-blue-light) 100%);
     padding: 16px 20px;
-    color: white;
+    color: white !important;
 }
 .preview-header h3 {
     margin: 0 0 8px 0;
@@ -198,11 +241,11 @@ table th:first-child {
     border-radius: 20px;
     font-size: 12px;
     font-weight: 600;
-    color: white;
+    color: white !important;
 }
 .preview-badge.task {
     background: var(--goai-yellow);
-    color: var(--goai-blue-dark);
+    color: var(--goai-blue-dark) !important;
 }
 .preview-badge.lang {
     background: rgba(255,255,255,0.3);
@@ -210,10 +253,11 @@ table th:first-child {
 .preview-section {
     padding: 16px 20px;
     border-bottom: 1px solid #e0e0e0;
+    background: #ffffff !important;
 }
 .preview-section h4 {
     margin: 0 0 12px 0;
-    color: var(--goai-blue);
+    color: var(--goai-blue) !important;
     font-size: 15px;
 }
 .metric-grid {
@@ -222,7 +266,7 @@ table th:first-child {
     flex-wrap: wrap;
 }
 .metric-card {
-    background: #f5f5f5;
+    background: #f5f5f5 !important;
     border-radius: 8px;
     padding: 10px 16px;
     text-align: center;
@@ -230,14 +274,17 @@ table th:first-child {
     flex: 1;
 }
 .metric-card.metric-primary {
-    background: linear-gradient(135deg, var(--goai-blue) 0%, var(--goai-blue-light) 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--goai-blue) 0%, var(--goai-blue-light) 100%) !important;
+    color: white !important;
 }
 .metric-card.metric-primary .metric-name {
-    color: var(--goai-yellow-light);
+    color: var(--goai-yellow-light) !important;
+}
+.metric-card.metric-primary .metric-value {
+    color: white !important;
 }
 .metric-card.metric-secondary .metric-value {
-    color: #222;
+    color: #222 !important;
 }
 .metric-name {
     display: block;
@@ -245,16 +292,16 @@ table th:first-child {
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 4px;
-    color: #666;
+    color: #666 !important;
 }
 .metric-value {
     display: block;
     font-size: 20px;
     font-weight: 700;
-    color: #222;
+    color: #222 !important;
 }
 
-/* Preview table — dark text on light backgrounds */
+/* ===== Preview table ===== */
 .preview-table {
     width: 100%;
     border-collapse: collapse;
@@ -273,25 +320,30 @@ table th:first-child {
     background: transparent;
 }
 .preview-table tr:nth-child(even) {
-    background: #f8f9fa;
+    background: #f8f9fa !important;
 }
 .preview-table tr:nth-child(odd) {
-    background: #ffffff;
+    background: #ffffff !important;
 }
 .preview-footer {
     padding: 12px 20px;
-    background: #f5f5f5;
+    background: #f5f5f5 !important;
     display: flex;
     justify-content: space-between;
     font-size: 13px;
-    color: #555;
+    color: #555 !important;
 }
 
-/* Documentation styling */
+/* ===== Documentation styling ===== */
 .docs-content {
-    font-size: 15px;
-    line-height: 1.7;
-    color: #222;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    color: #222 !important;
+}
+.docs-content p,
+.docs-content li,
+.docs-content span {
+    color: #222 !important;
 }
 .docs-content h2 {
     color: var(--goai-blue) !important;
@@ -316,13 +368,14 @@ table th:first-child {
     padding: 8px 10px !important;
     border-bottom: 1px solid #e0e0e0;
     color: #222 !important;
+    background: #ffffff !important;
 }
 .docs-content code {
-    background: rgba(21,101,192,0.08);
+    background: rgba(21,101,192,0.08) !important;
     padding: 2px 6px;
     border-radius: 4px;
     font-size: 13px;
-    color: #333;
+    color: #333 !important;
 }
 .docs-content pre {
     background: #f5f6fa !important;
@@ -332,8 +385,9 @@ table th:first-child {
     overflow-x: auto;
 }
 .docs-content pre code {
-    background: transparent;
+    background: transparent !important;
     padding: 0;
+    color: #333 !important;
 }
 .docs-content hr {
     border: none;
@@ -341,31 +395,71 @@ table th:first-child {
     margin: 24px 0;
 }
 
-/* Citation */
+/* ===== Citation ===== */
 #citation-button span {
     font-size: 14px !important;
+    color: #222 !important;
 }
 #citation-button textarea {
     font-size: 13px !important;
+    color: #222 !important;
+    background: #ffffff !important;
 }
 
-/* OAuth button */
-#oauth-button {
+/* ===== OAuth / Login button ===== */
+#oauth-button,
+#oauth-button a,
+#oauth-button button {
     height: auto;
     min-width: max-content;
     white-space: nowrap;
-    padding: 10px 20px;
-    border-radius: 8px;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
     background: var(--goai-blue) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    border: none !important;
+    transition: all 0.2s;
+}
+#oauth-button:hover,
+#oauth-button:hover a,
+#oauth-button:hover button,
+#oauth-button a:hover,
+#oauth-button button:hover {
+    background: var(--goai-blue-dark) !important;
+    color: white !important;
+}
+#oauth-button *,
+#oauth-button:hover * {
+    color: white !important;
 }
 
-/* Hide last dummy column */
+/* ===== Submit button — same style as OAuth ===== */
+.goai-btn,
+.goai-btn:active {
+    background: var(--goai-blue) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 10px 24px !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.goai-btn:hover {
+    background: var(--goai-blue-dark) !important;
+    color: white !important;
+}
+
+/* ===== Hide last dummy column ===== */
 #llm-benchmark-tab-table table td:last-child,
 #llm-benchmark-tab-table table th:last-child {
     display: none;
 }
 
-/* Logo sizing */
+/* ===== Logo sizing ===== */
 #scale-logo {
     border-style: none !important;
     box-shadow: none;
@@ -373,6 +467,23 @@ table th:first-child {
     margin-left: auto;
     margin-right: auto;
     max-width: 600px;
+}
+
+/* ===== Gradio component overrides for forced light ===== */
+.gradio-container input,
+.gradio-container textarea,
+.gradio-container select,
+.dark .gradio-container input,
+.dark .gradio-container textarea,
+.dark .gradio-container select {
+    color: #1a1a1a !important;
+    background: #ffffff !important;
+}
+.gradio-container .label-wrap,
+.gradio-container .label-wrap span,
+.dark .gradio-container .label-wrap,
+.dark .gradio-container .label-wrap span {
+    color: #333 !important;
 }
 """
 
