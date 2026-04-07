@@ -13,12 +13,10 @@ custom_css = """
     --goai-bronze: #CD7F32;
 }
 
-/* Force light mode */
+/* Force light mode — full width */
 .gradio-container {
     background: #ffffff !important;
     color: #1a1a1a !important;
-    max-width: 1200px;
-    margin: auto;
 }
 .dark .gradio-container,
 .dark {
