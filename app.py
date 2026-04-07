@@ -230,20 +230,12 @@ def create_submission_tab():
 
     with gr.Row():
         with gr.Column():
-            login_btn = gr.LoginButton(elem_id="oauth-button")
-            login_status = gr.Markdown(
-                "*Not logged in / Non connecté*",
+            gr.LoginButton(elem_id="oauth-button")
+            gr.Markdown(
+                "*🔒 Please sign in with HuggingFace before submitting. / "
+                "Veuillez vous connecter avec HuggingFace avant de soumettre.*",
                 elem_classes="guide-text",
             )
-
-    def show_login_status(profile: gr.OAuthProfile = None):
-        if profile is None:
-            return ("*🔒 Not logged in — please log in above to submit. / "
-                    "Non connecté — veuillez vous connecter ci-dessus pour soumettre.*")
-        return (f"*✅ Logged in as **{profile.username}** — you can submit results. / "
-                f"Connecté en tant que **{profile.username}** — vous pouvez soumettre.*")
-
-    demo.load(show_login_status, inputs=[], outputs=[login_status])
 
     with gr.Row():
         with gr.Column(scale=1):

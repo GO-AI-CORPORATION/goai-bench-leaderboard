@@ -5,7 +5,7 @@ from huggingface_hub import HfApi
 
 load_dotenv()
 
-TOKEN = os.environ.get("TOKEN")
+TOKEN = os.environ.get("HF_TOKEN") or os.environ.get("TOKEN")
 
 OWNER = "goaicorp"
 REPO_ID = f"{OWNER}/goai-bench-leaderboard"
