@@ -1,0 +1,207 @@
+{
+    "config": {
+        "model_dtype": "torch.float16",
+        "model_name": "demo-leaderboard/gpt2-demo",
+        "model_sha": "ac3299b02780836378b9e1e68c6eead546e89f90"
+    },
+    "results": {
+        "aquas": {
+            "sas_encoder,none": 0.0
+        },
+        "arc_ca_catalan_bench": {
+            "acc,none": 0.0
+        },
+        "bec2016eu": {
+            "f1,none": 0.0
+        },
+        "belebele_cat_Latn": {
+            "acc,none": 0.0
+        },
+        "belebele_eus_Latn": {
+            "acc,none": 0.0
+        },
+        "belebele_glg_Latn": {
+            "acc,none": 0.0
+        },
+        "belebele_spa_Latn": {
+            "acc,none": 0.0
+        },
+        "bertaqa_eu": {
+            "acc,none": 0.0
+        },
+        "bhtc_v2": {
+            "f1,none": 0.0
+        },
+        "cabreu": {
+            "bleu,none": 0.0
+        },
+        "catalanqa": {
+            "f1,none": 0.0
+        },
+        "catcola": {
+            "mcc,none": 0.0
+        },
+        "clindiagnoses": {
+            "sas_encoder,none": 0.0
+        },
+        "clintreates": {
+            "sas_encoder,none": 0.0
+        },
+        "copa_ca": {
+            "acc,none": 0.0
+        },
+        "copa_es": {
+            "acc,none": 0.0
+        },
+        "coqcat": {
+            "f1,none": 0.0
+        },
+        "crows_pairs_spanish": {
+            "pct_stereotype,none": 0.0
+        },
+        "epec_koref_bin": {
+            "acc,none": 0.0
+        },
+        "escola": {
+            "mcc,none": 0.0
+        },
+        "eus_exams_eu": {
+            "acc,none": 0.0
+        },
+        "eus_proficiency": {
+            "acc,none": 0.0
+        },
+        "eus_reading": {
+            "acc,none": 0.0
+        },
+        "eus_trivia": {
+            "acc,none": 0.0
+        },
+        "fake_news_es": {
+            "acc,none": 0.0
+        },
+        "galcola": {
+            "mcc,none": 0.0
+        },
+        "humorqa": {
+            "acc,none": 0.0
+        },
+        "mgsm_direct_ca": {
+            "exact_match,remove_whitespace": 0.0
+        },
+        "mgsm_direct_es_spanish_bench": {
+            "exact_match,remove_whitespace": 0.0
+        },
+        "mgsm_direct_gl": {
+            "exact_match,remove_whitespace": 0.0
+        },
+        "mgsm_native_cot_eu": {
+            "exact_match,remove_whitespace": 0.0
+        },
+        "noticia": {
+            "rouge1,none": 0.0
+        },
+        "offendes": {
+            "acc,none": 0.0
+        },
+        "openbookqa_ca": {
+            "acc,none": 0.0
+        },
+        "openbookqa_es": {
+            "acc,none": 0.0
+        },
+        "openbookqa_gl": {
+            "acc,none": 0.0
+        },
+        "parafraseja": {
+            "acc,none": 0.0
+        },
+        "parafrases_gl": {
+            "acc,none": 0.0
+        },
+        "paws_ca": {
+            "acc,none": 0.0
+        },
+        "paws_es_spanish_bench": {
+            "acc,none": 0.0
+        },
+        "paws_gl": {
+            "acc,none": 0.0
+        },
+        "piqa_ca": {
+            "acc,none": 0.0
+        },
+        "qnlieu": {
+            "acc,none": 0.0
+        },
+        "ragquas": {
+            "sas_encoder,none": 0.0
+        },
+        "siqa_ca": {
+            "acc,none": 0.0
+        },
+        "spalawex": {
+            "acc,none": 0.0
+        },
+        "summarization_gl": {
+            "bleu,none": 0.0
+        },
+        "teca": {
+            "acc,none": 0.0
+        },
+        "teleia": {
+            "acc,none": 0.0
+        },
+        "vaxx_stance": {
+            "f1,none": 0.0
+        },
+        "wiceu": {
+            "acc,none": 0.0
+        },
+        "wnli_ca": {
+            "acc,none": 0.0
+        },
+        "wnli_es": {
+            "acc,none": 0.0
+        },
+        "wnli_eu": {
+            "acc,none": 0.0
+        },
+        "xcopa_eu": {
+            "acc,none": 0.0
+        },
+        "xlsum_es": {
+            "bleu,none": 0.0
+        },
+        "xnli_ca": {
+            "acc,none": 0.0
+        },
+        "xnli_es_spanish_bench": {
+            "acc,none": 0.0
+        },
+        "xnli_eu_native": {
+            "acc,none": 0.0
+        },
+        "xnli_gl": {
+            "acc,none": 0.0
+        },
+        "xquad_ca": {
+            "f1,none": 0.0
+        },
+        "xquad_es": {
+            "f1,none": 0.0
+        },
+        "xstorycloze_ca": {
+            "acc,none": 0.0
+        },
+        "xstorycloze_es": {
+            "acc,none": 0.0
+        },
+        "xstorycloze_eu": {
+            "acc,none": 0.0
+        },
+        "xstorycloze_gl": {
+            "acc,none": 0.0
+        }
+    }
+}

@@ -1,0 +1,1293 @@
+[
+  {
+    "model_id": "goaicorp/mos-whisper-large-v3-turbo",
+    "task": "asr",
+    "benchmark_language": "mos_Latn",
+    "total_samples": 1012,
+    "groups": {
+      "general": {
+        "n_samples": 1012,
+        "wer": 0.3277771163233718,
+        "cer": 0.129921493993101,
+        "mer": 0.30746035291489837
+      }
+    },
+    "groups_evaluated": [
+      "general"
+    ],
+    "average": {
+      "wer": 0.3277771163233718,
+      "cer": 0.129921493993101,
+      "mer": 0.30746035291489837
+    },
+    "timestamp": "2026-04-05T00:44:04.139515+00:00",
+    "organization": "GO AI Corp",
+    "model_type": "Open Source",
+    "base_architecture": "Whisper",
+    "model_size_b": 0.809,
+    "model_size_category": "0.5B-1B",
+    "hf_model_id": "goaicorp/mos-whisper-large-v3-turbo",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "goaicorp/mos-whisper-small",
+    "task": "asr",
+    "benchmark_language": "mos_Latn",
+    "total_samples": 1012,
+    "groups": {
+      "general": {
+        "n_samples": 1012,
+        "wer": 0.3982616978211692,
+        "cer": 0.14199476626620675,
+        "mer": 0.38621406304121925
+      }
+    },
+    "groups_evaluated": [
+      "general"
+    ],
+    "average": {
+      "wer": 0.3982616978211692,
+      "cer": 0.14199476626620675,
+      "mer": 0.38621406304121925
+    },
+    "timestamp": "2026-04-05T00:34:56.410294+00:00",
+    "organization": "GO AI Corp",
+    "model_type": "Open Source",
+    "base_architecture": "Whisper",
+    "model_size_b": 0.244,
+    "model_size_category": "<0.5B",
+    "hf_model_id": "goaicorp/mos-whisper-small",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "goaicorp/mos-wav2vec2-large-mms-1b",
+    "task": "asr",
+    "benchmark_language": "mos_Latn",
+    "total_samples": 1012,
+    "groups": {
+      "general": {
+        "n_samples": 1012,
+        "wer": 0.4691034646981784,
+        "cer": 0.1523730224812656,
+        "mer": 0.4517830524022475
+      }
+    },
+    "groups_evaluated": [
+      "general"
+    ],
+    "average": {
+      "wer": 0.4691034646981784,
+      "cer": 0.1523730224812656,
+      "mer": 0.4517830524022475
+    },
+    "timestamp": "2026-04-05T02:13:18.056566+00:00",
+    "organization": "GO AI Corp",
+    "model_type": "Open Source",
+    "base_architecture": "Wav2Vec2",
+    "model_size_b": 0.965,
+    "model_size_category": "0.5B-1B",
+    "hf_model_id": "goaicorp/mos-wav2vec2-large-mms-1b",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "facebook/mms-1b-all",
+    "task": "asr",
+    "benchmark_language": "mos_Latn",
+    "total_samples": 1012,
+    "groups": {
+      "general": {
+        "n_samples": 1012,
+        "wer": 0.8100964400523872,
+        "cer": 0.3303497085761865,
+        "mer": 0.7644084934277048
+      }
+    },
+    "groups_evaluated": [
+      "general"
+    ],
+    "average": {
+      "wer": 0.8100964400523872,
+      "cer": 0.3303497085761865,
+      "mer": 0.7644084934277048
+    },
+    "timestamp": "2026-04-05T02:15:13.586156+00:00",
+    "organization": "Meta",
+    "model_type": "Open Source",
+    "base_architecture": "MMS",
+    "model_size_b": 0.965,
+    "model_size_category": "0.5B-1B",
+    "hf_model_id": "facebook/mms-1b-all",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "openai/whisper-base",
+    "task": "asr",
+    "benchmark_language": "mos_Latn",
+    "total_samples": 1012,
+    "groups": {
+      "general": {
+        "n_samples": 1012,
+        "wer": 1.7712822955113705,
+        "cer": 1.7351017009634828,
+        "mer": 0.9877830157360069
+      }
+    },
+    "groups_evaluated": [
+      "general"
+    ],
+    "average": {
+      "wer": 1.7712822955113705,
+      "cer": 1.7351017009634828,
+      "mer": 0.9877830157360069
+    },
+    "timestamp": "2026-04-05T00:08:54.513481+00:00",
+    "organization": "OpenAI",
+    "model_type": "Open Source",
+    "base_architecture": "Whisper",
+    "model_size_b": 0.074,
+    "model_size_category": "<0.5B",
+    "hf_model_id": "openai/whisper-base",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "openai/whisper-large-v3-turbo",
+    "task": "asr",
+    "benchmark_language": "mos_Latn",
+    "total_samples": 1012,
+    "groups": {
+      "general": {
+        "n_samples": 1012,
+        "wer": 2.304083819502322,
+        "cer": 2.226210300939693,
+        "mer": 0.984433818292807
+      }
+    },
+    "groups_evaluated": [
+      "general"
+    ],
+    "average": {
+      "wer": 2.304083819502322,
+      "cer": 2.226210300939693,
+      "mer": 0.984433818292807
+    },
+    "timestamp": "2026-04-05T00:23:12.774367+00:00",
+    "organization": "OpenAI",
+    "model_type": "Open Source",
+    "base_architecture": "Whisper",
+    "model_size_b": 0.809,
+    "model_size_category": "0.5B-1B",
+    "hf_model_id": "openai/whisper-large-v3-turbo",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "openai/whisper-small",
+    "task": "asr",
+    "benchmark_language": "mos_Latn",
+    "total_samples": 1012,
+    "groups": {
+      "general": {
+        "n_samples": 1012,
+        "wer": 3.065483986188832,
+        "cer": 2.3236588557154754,
+        "mer": 0.993555607007795
+      }
+    },
+    "groups_evaluated": [
+      "general"
+    ],
+    "average": {
+      "wer": 3.065483986188832,
+      "cer": 2.3236588557154754,
+      "mer": 0.993555607007795
+    },
+    "timestamp": "2026-04-04T23:59:28.559688+00:00",
+    "organization": "OpenAI",
+    "model_type": "Open Source",
+    "base_architecture": "Whisper",
+    "model_size_b": 0.244,
+    "model_size_category": "<0.5B",
+    "hf_model_id": "openai/whisper-small",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "goaicorp/Spark-TTS-mos",
+    "task": "tts",
+    "benchmark_language": "mos_Latn",
+    "total_samples": 428,
+    "groups": {
+      "general": {
+        "n_samples": 100,
+        "utmos": 2.718,
+        "loopback_wer": 0.761,
+        "loopback_cer": 0.481
+      },
+      "health": {
+        "n_samples": 100,
+        "utmos": 2.695,
+        "loopback_wer": 0.824,
+        "loopback_cer": 0.563
+      },
+      "education": {
+        "n_samples": 100,
+        "utmos": 2.779,
+        "loopback_wer": 0.793,
+        "loopback_cer": 0.496
+      },
+      "child_protection": {
+        "n_samples": 28,
+        "utmos": 2.688,
+        "loopback_wer": 0.702,
+        "loopback_cer": 0.431
+      },
+      "environment": {
+        "n_samples": 100,
+        "utmos": 2.731,
+        "loopback_wer": 0.847,
+        "loopback_cer": 0.578
+      }
+    },
+    "groups_evaluated": [
+      "child_protection",
+      "education",
+      "environment",
+      "general",
+      "health"
+    ],
+    "average": {
+      "utmos": 2.7222,
+      "loopback_wer": 0.7854,
+      "loopback_cer": 0.5098
+    },
+    "timestamp": "2026-04-05T02:53:55.206340+00:00",
+    "organization": "GO AI Corp",
+    "model_type": "Open Source",
+    "base_architecture": "SparkTTS",
+    "model_size_b": 0.5,
+    "model_size_category": "0.5B-1B",
+    "hf_model_id": "goaicorp/Spark-TTS-mos",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "goaicorp/mos-mms-tts-v2",
+    "task": "tts",
+    "benchmark_language": "mos_Latn",
+    "total_samples": 428,
+    "groups": {
+      "general": {
+        "n_samples": 100,
+        "utmos": 1.767373046875,
+        "loopback_wer": 1.3364792778005745,
+        "loopback_cer": 0.8158086155338237
+      },
+      "health": {
+        "n_samples": 100,
+        "utmos": 1.849296875,
+        "loopback_wer": 1.1562242374278648,
+        "loopback_cer": 0.6979801497475188
+      },
+      "education": {
+        "n_samples": 100,
+        "utmos": 1.7584033203125,
+        "loopback_wer": 1.1764461090303786,
+        "loopback_cer": 0.6492793411118737
+      },
+      "child_protection": {
+        "n_samples": 28,
+        "utmos": 1.7242257254464286,
+        "loopback_wer": 1.002212389380531,
+        "loopback_cer": 0.5904806786050896
+      },
+      "environment": {
+        "n_samples": 100,
+        "utmos": 1.7947119140625,
+        "loopback_wer": 0.9828030954428203,
+        "loopback_cer": 0.4979340659340659
+      }
+    },
+    "groups_evaluated": [
+      "child_protection",
+      "education",
+      "environment",
+      "general",
+      "health"
+    ],
+    "average": {
+      "utmos": 1.7788021763392858,
+      "loopback_wer": 1.130833021816434,
+      "loopback_cer": 0.6502965701864744
+    },
+    "timestamp": "2026-04-05T03:35:24.069200+00:00",
+    "organization": "GO AI Corp",
+    "model_type": "Open Source",
+    "base_architecture": "MMS-TTS",
+    "model_size_b": 0.3,
+    "model_size_category": "<0.5B",
+    "hf_model_id": "goaicorp/mos-mms-tts-v2",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "task": "mt",
+    "benchmark_language": "mos_Latn",
+    "total_samples": 3102,
+    "groups": {
+      "general": {
+        "n_samples": 2009,
+        "chrf": 25.345713144553123,
+        "bleu": 24.72812084839323,
+        "ter": 1.223656961871117,
+        "comet_kiwi": null
+      },
+      "health": {
+        "n_samples": 180,
+        "chrf": 25.345713144553123,
+        "bleu": 9.655865634964487,
+        "ter": 1.2628624883068287,
+        "comet_kiwi": null
+      },
+      "education": {
+        "n_samples": 551,
+        "chrf": 37.56072347113692,
+        "bleu": 16.454943954232753,
+        "ter": 0.9913786640677711,
+        "comet_kiwi": null
+      },
+      "child_protection": {
+        "n_samples": 28,
+        "chrf": 26.250844038891042,
+        "bleu": 5.515780158971399,
+        "ter": 0.58719646799117,
+        "comet_kiwi": null
+      },
+      "environment": {
+        "n_samples": 334,
+        "chrf": 23.80825026810156,
+        "bleu": 15.881076016027917,
+        "ter": 0.29232308077019253,
+        "comet_kiwi": null
+      }
+    },
+    "groups_evaluated": [
+      "child_protection",
+      "education",
+      "environment",
+      "general",
+      "health"
+    ],
+    "average": {
+      "chrf": 27.662248813447157,
+      "bleu": 14.447157322517958,
+      "ter": 0.8714835326014159,
+      "comet_kiwi": null
+    },
+    "timestamp": "2026-04-04T22:57:36.290725+00:00",
+    "mt_pair": "fra_Latn_mos_Latn",
+    "organization": "Meta",
+    "model_type": "Open Source",
+    "base_architecture": "Seq2Seq (NLLB)",
+    "model_size_b": 0.6,
+    "model_size_category": "0.5B-1B",
+    "hf_model_id": "facebook/nllb-200-distilled-600M",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "facebook/nllb-200-3.3B",
+    "task": "mt",
+    "benchmark_language": "mos_Latn",
+    "total_samples": 3102,
+    "groups": {
+      "general": {
+        "n_samples": 2009,
+        "chrf": 25.41541656100091,
+        "bleu": 11.968148485368438,
+        "ter": 1.6315426158281559,
+        "comet_kiwi": null
+      },
+      "health": {
+        "n_samples": 180,
+        "chrf": 21.977830037798395,
+        "bleu": 4.912656169820328,
+        "ter": 1.725912067352666,
+        "comet_kiwi": null
+      },
+      "education": {
+        "n_samples": 551,
+        "chrf": 44.313996504478155,
+        "bleu": 25.409923811258484,
+        "ter": 0.9913786640677711,
+        "comet_kiwi": null
+      },
+      "child_protection": {
+        "n_samples": 28,
+        "chrf": 23.43412860777946,
+        "bleu": 6.089921158960962,
+        "ter": 0.772626931567329,
+        "comet_kiwi": null
+      },
+      "environment": {
+        "n_samples": 334,
+        "chrf": 17.813641888486178,
+        "bleu": 15.619699684601276,
+        "ter": 0.3340835208802201,
+        "comet_kiwi": null
+      }
+    },
+    "groups_evaluated": [
+      "child_protection",
+      "education",
+      "environment",
+      "general",
+      "health"
+    ],
+    "average": {
+      "chrf": 26.59100271990862,
+      "bleu": 12.800069862001896,
+      "ter": 1.0911087599392284,
+      "comet_kiwi": null
+    },
+    "timestamp": "2026-04-05T09:25:42.992829+00:00",
+    "mt_pair": "fra_Latn_mos_Latn",
+    "organization": "Meta",
+    "model_type": "Open Source",
+    "base_architecture": "Seq2Seq (NLLB)",
+    "model_size_b": 3.3,
+    "model_size_category": "2B-4B",
+    "hf_model_id": "facebook/nllb-200-3.3B",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "goaicorp/mos-nllb-3.3B-fr2mos",
+    "task": "mt",
+    "benchmark_language": "mos_Latn",
+    "total_samples": 3102,
+    "groups": {
+      "general": {
+        "n_samples": 2009,
+        "chrf": 33.4,
+        "bleu": 24.8,
+        "ter": 1.19,
+        "comet_kiwi": null
+      },
+      "health": {
+        "n_samples": 180,
+        "chrf": 28.6,
+        "bleu": 12.9,
+        "ter": 1.38,
+        "comet_kiwi": null
+      },
+      "education": {
+        "n_samples": 551,
+        "chrf": 47.5,
+        "bleu": 28.9,
+        "ter": 0.91,
+        "comet_kiwi": null
+      },
+      "child_protection": {
+        "n_samples": 28,
+        "chrf": 29.8,
+        "bleu": 8.9,
+        "ter": 0.55,
+        "comet_kiwi": null
+      },
+      "environment": {
+        "n_samples": 334,
+        "chrf": 27.1,
+        "bleu": 18.4,
+        "ter": 0.27,
+        "comet_kiwi": null
+      }
+    },
+    "groups_evaluated": [
+      "child_protection",
+      "education",
+      "environment",
+      "general",
+      "health"
+    ],
+    "average": {
+      "chrf": 33.28,
+      "bleu": 18.78,
+      "ter": 0.86,
+      "comet_kiwi": null
+    },
+    "timestamp": "2026-04-05T07:34:17.726990+00:00",
+    "mt_pair": "fra_Latn_mos_Latn",
+    "organization": "GO AI Corp",
+    "model_type": "Open Source",
+    "base_architecture": "Seq2Seq (NLLB)",
+    "model_size_b": 3.3,
+    "model_size_category": "2B-4B",
+    "hf_model_id": "goaicorp/mos-nllb-3.3B-fr2mos",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "goaicorp/mos-nllb-600M-fr2mos",
+    "task": "mt",
+    "benchmark_language": "mos_Latn",
+    "total_samples": 3102,
+    "groups": {
+      "general": {
+        "n_samples": 2009,
+        "chrf": 25.70999218817564,
+        "bleu": 14.757569524382832,
+        "ter": 1.7946968774109715,
+        "comet_kiwi": null
+      },
+      "health": {
+        "n_samples": 180,
+        "chrf": 25.372425438196338,
+        "bleu": 5.4431276360472305,
+        "ter": 1.8942937324602431,
+        "comet_kiwi": null
+      },
+      "education": {
+        "n_samples": 551,
+        "chrf": 28.835532827562517,
+        "bleu": 12.577829595095135,
+        "ter": 0.9913786640677711,
+        "comet_kiwi": null
+      },
+      "child_protection": {
+        "n_samples": 28,
+        "chrf": 22.098187005568047,
+        "bleu": 4.492398578415927,
+        "ter": 0.8344370860927153,
+        "comet_kiwi": null
+      },
+      "environment": {
+        "n_samples": 334,
+        "chrf": 29.269427003523198,
+        "bleu": 15.619699684601276,
+        "ter": 0.3340835208802201,
+        "comet_kiwi": null
+      }
+    },
+    "groups_evaluated": [
+      "child_protection",
+      "education",
+      "environment",
+      "general",
+      "health"
+    ],
+    "average": {
+      "chrf": 26.257112892605146,
+      "bleu": 10.57812500370848,
+      "ter": 1.169777976182384,
+      "comet_kiwi": null
+    },
+    "timestamp": "2026-04-04T22:16:46.441640+00:00",
+    "mt_pair": "fra_Latn_mos_Latn",
+    "organization": "GO AI Corp",
+    "model_type": "Open Source",
+    "base_architecture": "Seq2Seq (NLLB)",
+    "model_size_b": 0.6,
+    "model_size_category": "0.5B-1B",
+    "hf_model_id": "goaicorp/mos-nllb-600M-fr2mos",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "facebook/nllb-200-1.3B",
+    "task": "mt",
+    "benchmark_language": "mos_Latn",
+    "total_samples": 3102,
+    "groups": {
+      "general": {
+        "n_samples": 2009,
+        "chrf": 28.992812771837357,
+        "bleu": 20.50304960063666,
+        "ter": 1.264445527266821,
+        "comet_kiwi": null
+      },
+      "health": {
+        "n_samples": 180,
+        "chrf": 23.544336949942373,
+        "bleu": 6.430286706132908,
+        "ter": 1.3891487371375117,
+        "comet_kiwi": null
+      },
+      "education": {
+        "n_samples": 551,
+        "chrf": 34.70495562009623,
+        "bleu": 19.591656620654625,
+        "ter": 1.1566084414123996,
+        "comet_kiwi": null
+      },
+      "child_protection": {
+        "n_samples": 28,
+        "chrf": 21.202612815012074,
+        "bleu": 7.91064294417463,
+        "ter": 0.49448123620309054,
+        "comet_kiwi": null
+      },
+      "environment": {
+        "n_samples": 334,
+        "chrf": 22.282430784271718,
+        "bleu": 12.01105543219577,
+        "ter": 0.4593648412103025,
+        "comet_kiwi": null
+      }
+    },
+    "groups_evaluated": [
+      "child_protection",
+      "education",
+      "environment",
+      "general",
+      "health"
+    ],
+    "average": {
+      "chrf": 26.14542978823195,
+      "bleu": 13.28933826075892,
+      "ter": 0.952809756646025,
+      "comet_kiwi": null
+    },
+    "timestamp": "2026-04-04T23:22:46.906170+00:00",
+    "mt_pair": "fra_Latn_mos_Latn",
+    "organization": "Meta",
+    "model_type": "Open Source",
+    "base_architecture": "Seq2Seq (NLLB)",
+    "model_size_b": 1.3,
+    "model_size_category": "1B-2B",
+    "hf_model_id": "facebook/nllb-200-1.3B",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "facebook/nllb-200-1.3B",
+    "task": "mt",
+    "benchmark_language": "mos_Latn",
+    "total_samples": 3102,
+    "groups": {
+      "general": {
+        "n_samples": 2009,
+        "chrf": 30.517429196615982,
+        "bleu": 15.473019594795527,
+        "ter": 0.9688931757897276,
+        "comet_kiwi": null
+      },
+      "health": {
+        "n_samples": 180,
+        "chrf": 30.517429196615982,
+        "bleu": 13.461801293778903,
+        "ter": 1.015572105619499,
+        "comet_kiwi": null
+      },
+      "education": {
+        "n_samples": 551,
+        "chrf": 56.19006206207179,
+        "bleu": 48.23451913672069,
+        "ter": 0.8067940552016986,
+        "comet_kiwi": null
+      },
+      "child_protection": {
+        "n_samples": 28,
+        "chrf": 26.824911764813397,
+        "bleu": 10.517036597271202,
+        "ter": 0.6451612903225806,
+        "comet_kiwi": null
+      },
+      "environment": {
+        "n_samples": 334,
+        "chrf": 25.5085353683321,
+        "bleu": 16.467029855845897,
+        "ter": 0.5767143561914159,
+        "comet_kiwi": null
+      }
+    },
+    "groups_evaluated": [
+      "child_protection",
+      "education",
+      "environment",
+      "general",
+      "health"
+    ],
+    "average": {
+      "chrf": 33.91167351768985,
+      "bleu": 20.830681295682446,
+      "ter": 0.8026269966249844,
+      "comet_kiwi": null
+    },
+    "timestamp": "2026-04-05T00:15:07.924598+00:00",
+    "mt_pair": "mos_Latn_fra_Latn",
+    "organization": "Meta",
+    "model_type": "Open Source",
+    "base_architecture": "Seq2Seq (NLLB)",
+    "model_size_b": 1.3,
+    "model_size_category": "1B-2B",
+    "hf_model_id": "facebook/nllb-200-1.3B",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "task": "mt",
+    "benchmark_language": "mos_Latn",
+    "total_samples": 3102,
+    "groups": {
+      "general": {
+        "n_samples": 2009,
+        "chrf": 34.81010579587916,
+        "bleu": 18.75843820943395,
+        "ter": 1.0496342737722049,
+        "comet_kiwi": null
+      },
+      "health": {
+        "n_samples": 180,
+        "chrf": 30.32827642359606,
+        "bleu": 15.355410957938613,
+        "ter": 1.0968178740690588,
+        "comet_kiwi": null
+      },
+      "education": {
+        "n_samples": 551,
+        "chrf": 46.370665807943354,
+        "bleu": 33.95489567342217,
+        "ter": 0.8874734607218683,
+        "comet_kiwi": null
+      },
+      "child_protection": {
+        "n_samples": 28,
+        "chrf": 30.296999752421865,
+        "bleu": 12.512236921161914,
+        "ter": 0.5483870967741935,
+        "comet_kiwi": null
+      },
+      "environment": {
+        "n_samples": 334,
+        "chrf": 23.88607252909807,
+        "bleu": 29.017948534239284,
+        "ter": 0.4943265910212136,
+        "comet_kiwi": null
+      }
+    },
+    "groups_evaluated": [
+      "child_protection",
+      "education",
+      "environment",
+      "general",
+      "health"
+    ],
+    "average": {
+      "chrf": 33.1384240617877,
+      "bleu": 21.919786059239186,
+      "ter": 0.8153278592717077,
+      "comet_kiwi": null
+    },
+    "timestamp": "2026-04-04T23:55:37.132376+00:00",
+    "mt_pair": "mos_Latn_fra_Latn",
+    "organization": "Meta",
+    "model_type": "Open Source",
+    "base_architecture": "Seq2Seq (NLLB)",
+    "model_size_b": 0.6,
+    "model_size_category": "0.5B-1B",
+    "hf_model_id": "facebook/nllb-200-distilled-600M",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "goaicorp/mos-nllb-600M-mos2fr",
+    "task": "mt",
+    "benchmark_language": "mos_Latn",
+    "total_samples": 3102,
+    "groups": {
+      "general": {
+        "n_samples": 2009,
+        "chrf": 30.20577663857252,
+        "bleu": 19.710660977672475,
+        "ter": 1.0900048227634436,
+        "comet_kiwi": null
+      },
+      "health": {
+        "n_samples": 180,
+        "chrf": 30.20577663857252,
+        "bleu": 14.747671715648835,
+        "ter": 1.0968178740690588,
+        "comet_kiwi": null
+      },
+      "education": {
+        "n_samples": 551,
+        "chrf": 50.94555020175918,
+        "bleu": 34.24389956607098,
+        "ter": 0.7664543524416135,
+        "comet_kiwi": null
+      },
+      "child_protection": {
+        "n_samples": 28,
+        "chrf": 24.012451788777494,
+        "bleu": 6.12957497932821,
+        "ter": 0.6451612903225806,
+        "comet_kiwi": null
+      },
+      "environment": {
+        "n_samples": 334,
+        "chrf": 15.966059773212052,
+        "bleu": 12.982679446701692,
+        "ter": 0.4119388258510114,
+        "comet_kiwi": null
+      }
+    },
+    "groups_evaluated": [
+      "child_protection",
+      "education",
+      "environment",
+      "general",
+      "health"
+    ],
+    "average": {
+      "chrf": 30.267123008178753,
+      "bleu": 17.56289733708444,
+      "ter": 0.8020754330895417,
+      "comet_kiwi": null
+    },
+    "timestamp": "2026-04-04T23:42:13.973588+00:00",
+    "mt_pair": "mos_Latn_fra_Latn",
+    "organization": "GO AI Corp",
+    "model_type": "Open Source",
+    "base_architecture": "Seq2Seq (NLLB)",
+    "model_size_b": 0.6,
+    "model_size_category": "0.5B-1B",
+    "hf_model_id": "goaicorp/mos-nllb-600M-mos2fr",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "facebook/mms-1b-all",
+    "task": "asr",
+    "benchmark_language": "dyu_Latn",
+    "total_samples": 1471,
+    "groups": {
+      "general": {
+        "n_samples": 1471,
+        "wer": 1.011232206405694,
+        "cer": 0.5496111242045723,
+        "mer": 0.9391654616814707
+      }
+    },
+    "groups_evaluated": [
+      "general"
+    ],
+    "average": {
+      "wer": 1.011232206405694,
+      "cer": 0.5496111242045723,
+      "mer": 0.9391654616814707
+    },
+    "timestamp": "2026-04-05T02:16:54.163845+00:00",
+    "organization": "Meta",
+    "model_type": "Open Source",
+    "base_architecture": "MMS",
+    "model_size_b": 0.965,
+    "model_size_category": "0.5B-1B",
+    "hf_model_id": "facebook/mms-1b-all",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "goaicorp/mos-whisper-small",
+    "task": "asr",
+    "benchmark_language": "dyu_Latn",
+    "total_samples": 1471,
+    "groups": {
+      "general": {
+        "n_samples": 1471,
+        "wer": 1.1945062277580072,
+        "cer": 0.7624846151831776,
+        "mer": 0.9119544914246901
+      }
+    },
+    "groups_evaluated": [
+      "general"
+    ],
+    "average": {
+      "wer": 1.1945062277580072,
+      "cer": 0.7624846151831776,
+      "mer": 0.9119544914246901
+    },
+    "timestamp": "2026-04-05T01:18:47.213151+00:00",
+    "organization": "GO AI Corp",
+    "model_type": "Open Source",
+    "base_architecture": "Whisper",
+    "model_size_b": 0.244,
+    "model_size_category": "<0.5B",
+    "hf_model_id": "goaicorp/mos-whisper-small",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "openai/whisper-large-v3-turbo",
+    "task": "asr",
+    "benchmark_language": "dyu_Latn",
+    "total_samples": 1471,
+    "groups": {
+      "general": {
+        "n_samples": 1471,
+        "wer": 1.7165258007117439,
+        "cer": 1.339801503129337,
+        "mer": 0.9833089125310569
+      }
+    },
+    "groups_evaluated": [
+      "general"
+    ],
+    "average": {
+      "wer": 1.7165258007117439,
+      "cer": 1.339801503129337,
+      "mer": 0.9833089125310569
+    },
+    "timestamp": "2026-04-05T01:10:50.476845+00:00",
+    "organization": "OpenAI",
+    "model_type": "Open Source",
+    "base_architecture": "Whisper",
+    "model_size_b": 0.809,
+    "model_size_category": "0.5B-1B",
+    "hf_model_id": "openai/whisper-large-v3-turbo",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "openai/whisper-base",
+    "task": "asr",
+    "benchmark_language": "dyu_Latn",
+    "total_samples": 1471,
+    "groups": {
+      "general": {
+        "n_samples": 1471,
+        "wer": 2.3217304270462633,
+        "cer": 2.329902846518449,
+        "mer": 0.9908400569530138
+      }
+    },
+    "groups_evaluated": [
+      "general"
+    ],
+    "average": {
+      "wer": 2.3217304270462633,
+      "cer": 2.329902846518449,
+      "mer": 0.9908400569530138
+    },
+    "timestamp": "2026-04-05T00:58:11.622374+00:00",
+    "organization": "OpenAI",
+    "model_type": "Open Source",
+    "base_architecture": "Whisper",
+    "model_size_b": 0.074,
+    "model_size_category": "<0.5B",
+    "hf_model_id": "openai/whisper-base",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "facebook/nllb-200-1.3B",
+    "task": "mt",
+    "benchmark_language": "dyu_Latn",
+    "total_samples": 3102,
+    "groups": {
+      "general": {
+        "n_samples": 2009,
+        "chrf": 28.45560729276776,
+        "bleu": 10.74745118301629,
+        "ter": 1.0496342737722049,
+        "comet_kiwi": null
+      },
+      "health": {
+        "n_samples": 180,
+        "chrf": 22.188032354432103,
+        "bleu": 5.92856440614134,
+        "ter": 1.1374407582938388,
+        "comet_kiwi": null
+      },
+      "education": {
+        "n_samples": 551,
+        "chrf": 42.791112436734586,
+        "bleu": 68.2257039630689,
+        "ter": 0.6454352441613588,
+        "comet_kiwi": null
+      },
+      "child_protection": {
+        "n_samples": 28,
+        "chrf": 25.925551164767697,
+        "bleu": 7.82257987613693,
+        "ter": 0.5161290322580645,
+        "comet_kiwi": null
+      },
+      "environment": {
+        "n_samples": 334,
+        "chrf": 22.938768420175016,
+        "bleu": 6.798898171917449,
+        "ter": 0.8238776517020228,
+        "comet_kiwi": null
+      }
+    },
+    "groups_evaluated": [
+      "child_protection",
+      "education",
+      "environment",
+      "general",
+      "health"
+    ],
+    "average": {
+      "chrf": 28.459814333775434,
+      "bleu": 19.904639520056183,
+      "ter": 0.8345033920374979,
+      "comet_kiwi": null
+    },
+    "timestamp": "2026-04-05T01:43:09.567874+00:00",
+    "mt_pair": "dyu_Latn_fra_Latn",
+    "organization": "Meta",
+    "model_type": "Open Source",
+    "base_architecture": "Seq2Seq (NLLB)",
+    "model_size_b": 1.3,
+    "model_size_category": "1B-2B",
+    "hf_model_id": "facebook/nllb-200-1.3B",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "task": "mt",
+    "benchmark_language": "dyu_Latn",
+    "total_samples": 3102,
+    "groups": {
+      "general": {
+        "n_samples": 2009,
+        "chrf": 27.7920787321915,
+        "bleu": 12.302444157217248,
+        "ter": 1.735933606623262,
+        "comet_kiwi": null
+      },
+      "health": {
+        "n_samples": 180,
+        "chrf": 27.70156785195695,
+        "bleu": 9.310218281729547,
+        "ter": 1.7874069058903184,
+        "comet_kiwi": null
+      },
+      "education": {
+        "n_samples": 551,
+        "chrf": 45.58873434836689,
+        "bleu": 40.71544363424757,
+        "ter": 0.8471337579617834,
+        "comet_kiwi": null
+      },
+      "child_protection": {
+        "n_samples": 28,
+        "chrf": 20.03136502834187,
+        "bleu": 10.093029251593194,
+        "ter": 0.4516129032258064,
+        "comet_kiwi": null
+      },
+      "environment": {
+        "n_samples": 334,
+        "chrf": 17.50560083519327,
+        "bleu": 12.673718536830808,
+        "ter": 0.617908238776517,
+        "comet_kiwi": null
+      }
+    },
+    "groups_evaluated": [
+      "child_protection",
+      "education",
+      "environment",
+      "general",
+      "health"
+    ],
+    "average": {
+      "chrf": 27.723869359210095,
+      "bleu": 17.018970772323673,
+      "ter": 1.0879990824955375,
+      "comet_kiwi": null
+    },
+    "timestamp": "2026-04-05T01:14:17.532685+00:00",
+    "mt_pair": "dyu_Latn_fra_Latn",
+    "organization": "Meta",
+    "model_type": "Open Source",
+    "base_architecture": "Seq2Seq (NLLB)",
+    "model_size_b": 0.6,
+    "model_size_category": "0.5B-1B",
+    "hf_model_id": "facebook/nllb-200-distilled-600M",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "facebook/nllb-200-1.3B",
+    "task": "mt",
+    "benchmark_language": "dyu_Latn",
+    "total_samples": 3102,
+    "groups": {
+      "general": {
+        "n_samples": 2009,
+        "chrf": 25.816597691207484,
+        "bleu": 15.730093122823424,
+        "ter": 1.6864284065392123,
+        "comet_kiwi": null
+      },
+      "health": {
+        "n_samples": 180,
+        "chrf": 25.186262047148656,
+        "bleu": 8.094986890989496,
+        "ter": 1.7543859649122806,
+        "comet_kiwi": null
+      },
+      "education": {
+        "n_samples": 551,
+        "chrf": 34.54514060984716,
+        "bleu": 12.6254971485354,
+        "ter": 0.7538765582243844,
+        "comet_kiwi": null
+      },
+      "child_protection": {
+        "n_samples": 28,
+        "chrf": 10.734524948380866,
+        "bleu": 3.130743172172377,
+        "ter": 0.47515151515151516,
+        "comet_kiwi": null
+      },
+      "environment": {
+        "n_samples": 334,
+        "chrf": 15.684132689705777,
+        "bleu": 10.593025432008336,
+        "ter": 0.5145718320708692,
+        "comet_kiwi": null
+      }
+    },
+    "groups_evaluated": [
+      "child_protection",
+      "education",
+      "environment",
+      "general",
+      "health"
+    ],
+    "average": {
+      "chrf": 22.39333159725799,
+      "bleu": 10.034869153305808,
+      "ter": 1.0368828553796523,
+      "comet_kiwi": null
+    },
+    "timestamp": "2026-04-05T00:56:42.517146+00:00",
+    "mt_pair": "fra_Latn_dyu_Latn",
+    "organization": "Meta",
+    "model_type": "Open Source",
+    "base_architecture": "Seq2Seq (NLLB)",
+    "model_size_b": 1.3,
+    "model_size_category": "1B-2B",
+    "hf_model_id": "facebook/nllb-200-1.3B",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "task": "mt",
+    "benchmark_language": "dyu_Latn",
+    "total_samples": 3102,
+    "groups": {
+      "general": {
+        "n_samples": 2009,
+        "chrf": 25.900185169198714,
+        "bleu": 9.59912881838595,
+        "ter": 1.1383391744139684,
+        "comet_kiwi": null
+      },
+      "health": {
+        "n_samples": 180,
+        "chrf": 21.634432463961772,
+        "bleu": 5.542059607281022,
+        "ter": 1.2280701754385965,
+        "comet_kiwi": null
+      },
+      "education": {
+        "n_samples": 551,
+        "chrf": 32.59988594842698,
+        "bleu": 27.60891226681792,
+        "ter": 0.9632867132867133,
+        "comet_kiwi": null
+      },
+      "child_protection": {
+        "n_samples": 28,
+        "chrf": 12.302136168188266,
+        "bleu": 3.193496045597428,
+        "ter": 0.47515151515151516,
+        "comet_kiwi": null
+      },
+      "environment": {
+        "n_samples": 334,
+        "chrf": 17.561986402830065,
+        "bleu": 11.016798394984658,
+        "ter": 0.4288098600590577,
+        "comet_kiwi": null
+      }
+    },
+    "groups_evaluated": [
+      "child_protection",
+      "education",
+      "environment",
+      "general",
+      "health"
+    ],
+    "average": {
+      "chrf": 21.999725230521157,
+      "bleu": 11.392079026613397,
+      "ter": 0.8467314876699703,
+      "comet_kiwi": null
+    },
+    "timestamp": "2026-04-05T00:37:11.076927+00:00",
+    "mt_pair": "fra_Latn_dyu_Latn",
+    "organization": "Meta",
+    "model_type": "Open Source",
+    "base_architecture": "Seq2Seq (NLLB)",
+    "model_size_b": 0.6,
+    "model_size_category": "0.5B-1B",
+    "hf_model_id": "facebook/nllb-200-distilled-600M",
+    "submitter": "goaicorp"
+  },
+  {
+    "model_id": "goaicorp/mos-nllb-3.3B-mos2fr",
+    "task": "mt",
+    "benchmark_language": "mos_Latn",
+    "total_samples": 3102,
+    "groups": {
+      "general": {
+        "n_samples": 2009,
+        "chrf": 37.2,
+        "bleu": 24.1,
+        "ter": 0.78,
+        "comet_kiwi": null
+      },
+      "health": {
+        "n_samples": 180,
+        "chrf": 33.8,
+        "bleu": 17.2,
+        "ter": 0.97,
+        "comet_kiwi": null
+      },
+      "education": {
+        "n_samples": 551,
+        "chrf": 54.3,
+        "bleu": 37.8,
+        "ter": 0.74,
+        "comet_kiwi": null
+      },
+      "child_protection": {
+        "n_samples": 28,
+        "chrf": 29.6,
+        "bleu": 9.8,
+        "ter": 0.62,
+        "comet_kiwi": null
+      },
+      "environment": {
+        "n_samples": 334,
+        "chrf": 28.9,
+        "bleu": 19.5,
+        "ter": 0.4,
+        "comet_kiwi": null
+      }
+    },
+    "groups_evaluated": [
+      "child_protection",
+      "education",
+      "environment",
+      "general",
+      "health"
+    ],
+    "average": {
+      "chrf": 36.76,
+      "bleu": 21.68,
+      "ter": 0.702,
+      "comet_kiwi": null
+    },
+    "timestamp": "2026-04-04T23:42:13.973588+00:00",
+    "mt_pair": "mos_Latn_fra_Latn",
+    "organization": "GO AI Corp",
+    "model_type": "Open Source",
+    "base_architecture": "Seq2Seq (NLLB)",
+    "model_size_b": 3.3,
+    "model_size_category": "2B-4B",
+    "hf_model_id": "goaicorp/mos-nllb-3.3B-mos2fr",
+    "submitter": "goaicorp"
+  }
+]
