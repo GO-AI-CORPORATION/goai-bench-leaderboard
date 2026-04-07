@@ -387,9 +387,9 @@ with demo:
             )
 
 if os.environ.get("SPACE_ID"):
-    scheduler = BackgroundScheduler()
-    scheduler.add_job(restart_space, "interval", seconds=1800)
-    scheduler.start()
+scheduler = BackgroundScheduler()
+scheduler.add_job(restart_space, "interval", seconds=1800)
+scheduler.start()
 
 demo.launch(
     server_name="0.0.0.0",
