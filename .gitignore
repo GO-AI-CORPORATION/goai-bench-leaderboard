@@ -16,8 +16,3 @@ eval-queue-bk/
 eval-results-bk/
 logs/
 todo.md
-
-# Binary assets (served via GitHub raw URL to avoid HF push rejection)
-assets/*.png
-assets/*.jpg
-assets/*.jpeg

@@ -8,7 +8,7 @@ TITLE = """
         <a href="https://huggingface.co/goaicorp">HuggingFace Org</a> &middot;
         <a href="https://goaicorporation.org/">GO AI Corp</a>
     </div>
-    <img class="goai-logo" src="https://raw.githubusercontent.com/GO-AI-CORPORATION/goai-bench-leaderboard/main/assets/go-ai-bench-logo.png" alt="GO AI Bench" />
+    <img class="goai-logo" src="https://raw.githubusercontent.com/GO-AI-CORPORATION/goai-bench/af2c55e7db8d6275337da4b4bbeb73beb3804628/assets/go-ai-bench-logo.png" alt="GO AI Bench" />
 </div>
 """
 
