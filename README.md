@@ -18,7 +18,7 @@ tags:
   - mt
   - tts
   - unicef
-short_description: Open benchmarking leaderboard for NLP models on Mooré & Dioula
+short_description: Open benchmarking leaderboard for NLP models on Mooré & Dyu.
 ---
 
 # GO AI Bench Leaderboard
