@@ -98,23 +98,23 @@ custom_css = """
     width: auto;
 }
 
-/* ===== Tab styling ===== */
-.tab-buttons > .tab-nav button {
+/* ===== Tab styling (Gradio 5.x structure: .tab-wrapper > .tab-container) ===== */
+.tab-buttons .tab-container {
+    justify-content: center !important;
+}
+.tab-buttons .tab-container > button {
     font-size: 15px !important;
     font-weight: 600 !important;
-    border-radius: 8px 8px 0 0 !important;
-    padding: 10px 18px !important;
-    border-bottom: 2px solid transparent !important;
+    padding: 0 18px !important;
     background: #f0f1f3 !important;
     margin-right: 2px !important;
 }
-.tab-buttons > .tab-nav button:hover {
+.tab-buttons .tab-container > button:hover:not(.selected) {
     background: #e3e8f0 !important;
-    border-bottom: 2px solid var(--goai-blue) !important;
+    color: var(--goai-blue) !important;
 }
-.tab-buttons > .tab-nav button.selected {
+.tab-buttons .tab-container > button.selected {
     background: #dce6f5 !important;
-    border-bottom: 3px solid var(--goai-blue) !important;
     color: var(--goai-blue) !important;
 }
 
