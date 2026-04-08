@@ -34,12 +34,16 @@ LEADERBOARD_INTRO_EN = """
 **👋 Welcome to the GO AI Bench Leaderboard!** Browse and compare models benchmarked on Mooré and Dioula across ASR, MT, and TTS tasks.
 
 **How to use:** Select a language tab below, then a task sub-tab. Use the filters to narrow results by domain, model type, architecture, or size. Click column headers to sort.
+
+**Notice:** the general FLORES+ evaluation works. The four domain sets (health, education, child protection, environment) are temporarily unavailable and will be fixed later.
 """
 
 LEADERBOARD_INTRO_FR = """
 **👋 Bienvenue sur le classement GO AI Bench !** Parcourez et comparez les modèles évalués sur le Mooré et le Dioula pour les tâches ASR, MT et TTS.
 
 **Comment utiliser :** Sélectionnez un onglet de langue ci-dessous, puis un sous-onglet de tâche. Utilisez les filtres pour affiner par domaine, type de modèle, architecture ou taille. Cliquez sur les en-têtes de colonnes pour trier.
+
+**Avis :** l'évaluation générale FLORES+ fonctionne. Les quatre jeux par domaine (santé, éducation, protection de l'enfance, environnement) sont temporairement indisponibles et seront corrigés plus tard.
 """
 
 MOORE_GUIDE_EN = """
