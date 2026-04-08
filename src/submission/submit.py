@@ -1,7 +1,8 @@
+import hashlib
 import json
 import os
 from datetime import datetime, timezone
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 
 import gradio as gr
 
@@ -9,6 +10,41 @@ from src.display.formatting import styled_error, styled_message, styled_warning
 from src.envs import API, EVAL_RESULTS_PATH, RESULTS_REPO, TOKEN
 from src.submission.check_validity import validate_goai_json
 from src.tasks import TASK_CONFIGS, Domain, Language, get_metric_keys, size_category_from_b
+
+REFRESH_INTERVAL_MIN = 60
+
+
+def _result_fingerprint(data: Dict[str, Any]) -> str:
+    """Deterministic hash of the core result fields to detect exact duplicates."""
+    key_parts = [
+        data.get("model_id", ""),
+        data.get("task", ""),
+        data.get("benchmark_language", ""),
+        data.get("mt_pair", ""),
+        json.dumps(data.get("average", {}), sort_keys=True),
+        json.dumps(data.get("groups", {}), sort_keys=True),
+    ]
+    return hashlib.sha256("|".join(key_parts).encode()).hexdigest()[:16]
+
+
+def _existing_fingerprints() -> set:
+    """Collect fingerprints of already-submitted results on disk."""
+    fps: set = set()
+    if not os.path.isdir(EVAL_RESULTS_PATH):
+        return fps
+    for root, _, files in os.walk(EVAL_RESULTS_PATH):
+        for fname in files:
+            if not fname.endswith(".json"):
+                continue
+            try:
+                with open(os.path.join(root, fname), encoding="utf-8") as f:
+                    d = json.load(f)
+                if isinstance(d, list):
+                    d = d[0] if len(d) == 1 else {}
+                fps.add(_result_fingerprint(d))
+            except Exception:
+                pass
+    return fps
 
 
 def generate_preview_html(data: Dict[str, Any]) -> str:
@@ -121,6 +157,13 @@ def submit_result(
     if not valid:
         return styled_error("Validation errors:<br>" + "<br>".join(f"• {e}" for e in errors))
 
+    fp = _result_fingerprint(data)
+    if fp in _existing_fingerprints():
+        return styled_error(
+            "⚠️ Duplicate submission detected — these exact results have already been submitted.<br>"
+            "Soumission en doublon détectée — ces résultats identiques ont déjà été soumis."
+        )
+
     data["model_type"] = model_type or "Open Source"
     data["organization"] = organization or "Anonymous"
     data["hf_model_id"] = hf_model_id or data["model_id"]
@@ -164,5 +207,7 @@ def submit_result(
 
     return styled_message(
         f"✅ Result submitted successfully! / Résultat soumis avec succès !<br>"
-        f"Model: {data['model_id']} | Task: {task.upper()} | Language: {lang}"
+        f"Model: {data['model_id']} | Task: {task.upper()} | Language: {lang}<br><br>"
+        f"⏳ The leaderboard will be automatically updated within {REFRESH_INTERVAL_MIN} minutes.<br>"
+        f"Le classement sera automatiquement mis à jour dans {REFRESH_INTERVAL_MIN} minutes."
     )

@@ -52,49 +52,78 @@ custom_css = """
     --block-shadow: none !important;
 }
 
-/* ===== Header ===== */
+/* ===== Fixed app width ===== */
 .gradio-container {
     max-width: 1200px !important;
+    min-width: 0 !important;
+    width: 1200px !important;
     margin: 0 auto !important;
 }
+@media (max-width: 1240px) {
+    .gradio-container {
+        width: 100% !important;
+        padding: 0 16px !important;
+    }
+}
 
+/* ===== Header ===== */
 .goai-header {
     text-align: center;
-    padding: 28px 30px 20px 30px;
+    padding: 32px 30px 24px 30px;
     border-bottom: 3px solid var(--goai-blue);
     margin-bottom: 20px;
 }
 .goai-header h1 {
     color: var(--goai-blue) !important;
-    font-size: 30px;
+    font-size: 38px;
     font-weight: 800;
-    margin: 0 0 6px 0;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.5px;
 }
 .goai-header .goai-subtitle {
     color: #444 !important;
-    font-size: 15px;
-    max-width: 800px;
-    margin: 4px auto;
-    line-height: 1.5;
+    font-size: 17px;
+    max-width: 850px;
+    margin: 6px auto;
+    line-height: 1.6;
 }
 .goai-header .goai-links {
-    margin-top: 10px;
-    font-size: 14px;
+    margin-top: 14px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
 }
 .goai-header .goai-links a {
     color: var(--goai-blue) !important;
     text-decoration: none;
     font-weight: 600;
-    margin: 0 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    transition: all 0.2s;
 }
 .goai-header .goai-links a:hover {
-    color: var(--goai-yellow-dark) !important;
-    text-decoration: underline;
+    color: var(--goai-blue-dark) !important;
+    background: rgba(21,101,192,0.08);
+}
+.goai-header .goai-links .link-sep {
+    color: #bbb;
+    font-size: 18px;
+}
+.goai-header .goai-links .link-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
 }
 .goai-header .goai-logo {
     display: block;
-    margin: 14px auto 0 auto;
-    max-height: 90px;
+    margin: 18px auto 0 auto;
+    max-height: 120px;
     width: auto;
 }
 
