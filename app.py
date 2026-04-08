@@ -327,7 +327,7 @@ with demo:
             with gr.Tabs(elem_classes="tab-buttons") as lang_tabs:
                 # ----- Mooré -----
                 with gr.TabItem("🇧🇫 Mooré (mos)", id=10):
-                    gr.Markdown(MOORE_GUIDE_EN + "\n" + MOORE_GUIDE_FR, elem_classes="guide-text")
+                    # gr.Markdown(MOORE_GUIDE_EN + "\n" + MOORE_GUIDE_FR, elem_classes="guide-text")
 
                     with gr.Tabs(elem_classes="tab-buttons") as mos_task_tabs:
                         with gr.TabItem("🎤 ASR", id=101):
@@ -344,7 +344,7 @@ with demo:
 
                 # ----- Dioula -----
                 with gr.TabItem("🇧🇫 Dioula (dyu)", id=11):
-                    gr.Markdown(DIOULA_GUIDE_EN + "\n" + DIOULA_GUIDE_FR, elem_classes="guide-text")
+                    # gr.Markdown(DIOULA_GUIDE_EN + "\n" + DIOULA_GUIDE_FR, elem_classes="guide-text")
 
                     with gr.Tabs(elem_classes="tab-buttons") as dyu_task_tabs:
                         with gr.TabItem("🎤 ASR", id=111):

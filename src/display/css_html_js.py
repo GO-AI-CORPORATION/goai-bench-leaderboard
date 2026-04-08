@@ -41,6 +41,15 @@ custom_css = """
     --neutral-800: #1f2937 !important;
     --link-text-color: #1565C0 !important;
     --link-text-color-hover: #0D47A1 !important;
+    --checkbox-label-background-fill: #ffffff !important;
+    --checkbox-background-color-selected: #1565C0 !important;
+    --checkbox-label-background-fill-hover: #f9fafb !important;
+    --checkbox-label-background-fill-selected: #eef2ff !important;
+    --checkbox-border-color-selected: #1565C0 !important;
+    --color-accent: #1565C0 !important;
+    --color-accent-soft: rgba(21,101,192,0.12) !important;
+    --shadow-drop: none !important;
+    --block-shadow: none !important;
 }
 
 /* ===== Header ===== */
@@ -84,12 +93,7 @@ custom_css = """
     width: auto;
 }
 
-/* ===== Tab centering ===== */
-.tab-buttons > div {
-    justify-content: center;
-}
-
-/* Tab button styling */
+/* ===== Tab styling ===== */
 .tab-buttons button {
     font-size: 15px !important;
     font-weight: 600 !important;
