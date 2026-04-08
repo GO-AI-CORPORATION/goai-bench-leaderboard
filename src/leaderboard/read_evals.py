@@ -3,7 +3,7 @@ import os
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
-from src.display.formatting import make_clickable_model
+from src.display.formatting import make_clickable_model, rank_label
 from src.tasks import (
     TASK_CONFIGS,
     Domain,

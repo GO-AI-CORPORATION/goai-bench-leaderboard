@@ -120,15 +120,45 @@ custom_css = """
     height: 18px;
     flex-shrink: 0;
 }
-.goai-header .goai-links .hf-logo-svg {
-    width: 24px;
-    height: 24px;
+.goai-header .goai-links .link-icon-img {
+    width: 20px;
+    height: 20px;
     flex-shrink: 0;
+    display: block;
+    object-fit: contain;
 }
-.goai-header .goai-links .linkedin-logo-svg {
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
+.goai-header .goai-links .link-icon-linkedin {
+    color: #0A66C2 !important;
+}
+.goai-header .goai-links a:hover .link-icon-linkedin {
+    color: #004182 !important;
+}
+
+/* ===== Bilingual EN | FR columns (Leaderboard guides) ===== */
+.goai-bilingual-row {
+    gap: 12px !important;
+    align-items: stretch !important;
+}
+.goai-bilingual-row > div {
+    min-width: 0 !important;
+    flex: 1 1 0 !important;
+}
+.goai-bilingual-row .guide-text {
+    height: 100%;
+    margin-top: 0 !important;
+}
+.goai-lang-label {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em !important;
+    color: var(--goai-blue) !important;
+    margin-bottom: 6px !important;
+    display: block !important;
+}
+@media (max-width: 900px) {
+    .goai-bilingual-row {
+        flex-direction: column !important;
+    }
 }
 .goai-header .goai-logo {
     display: block;
@@ -178,70 +208,6 @@ custom_css = """
 }
 .guide-text strong {
     color: var(--goai-blue) !important;
-}
-
-/* Bilingual intro (Leaderboard) */
-.bilingual-intro {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 20px !important;
-    align-items: flex-start !important;
-}
-.bilingual-col {
-    flex: 1 1 320px;
-    min-width: 260px;
-    max-width: 100%;
-}
-.bilingual-col p {
-    margin: 0 0 10px 0;
-}
-.bilingual-col p:last-child {
-    margin-bottom: 0;
-}
-.medals-inline {
-    display: inline-flex;
-    align-items: center;
-    vertical-align: middle;
-}
-.submission-login-hint {
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    flex-wrap: wrap !important;
-}
-.submission-login-hint .inline-icon {
-    flex-shrink: 0;
-    color: var(--goai-blue);
-}
-
-/* Rank column (HTML cells) */
-.rank-cell {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    vertical-align: middle;
-}
-.medal-icon {
-    vertical-align: middle;
-    display: inline-block;
-}
-
-/* Preview card icons */
-.preview-header .preview-h3-icon,
-.preview-header .preview-h3-icon .inline-icon {
-    vertical-align: middle;
-    color: #fff;
-}
-.preview-section .preview-h4-icon,
-.preview-section .preview-h4-icon .inline-icon {
-    vertical-align: middle;
-    margin-right: 6px;
-    color: var(--goai-blue);
-}
-.preview-footer .inline-icon {
-    vertical-align: middle;
-    margin-right: 4px;
-    color: #555;
 }
 
 /* Remove extra box around markdown guide-text */

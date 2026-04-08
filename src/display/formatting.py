@@ -1,6 +1,3 @@
-from src.display.icons import rank_cell_html
-
-
 def model_hyperlink(link, model_name):
     return f'<a target="_blank" href="{link}" style="color: var(--link-text-color); text-decoration: underline; text-decoration-style: dotted;">{model_name}</a>'
 
@@ -22,5 +19,9 @@ def styled_message(message):
     return f"<p style='color: #1b5e20; font-size: 18px; text-align: center; padding: 12px; background: #e8f5e9; border-radius: 8px;'>{message}</p>"
 
 
+MEDAL_ICONS = {1: "🥇", 2: "🥈", 3: "🥉"}
+
+
 def rank_label(rank):
-    return rank_cell_html(int(rank))
+    medal = MEDAL_ICONS.get(rank, "")
+    return f"{medal} {rank}" if medal else str(rank)

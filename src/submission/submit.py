@@ -2,21 +2,11 @@ import hashlib
 import json
 import os
 from datetime import datetime, timezone
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 
 import gradio as gr
 
 from src.display.formatting import styled_error, styled_message, styled_warning
-from src.display.icons import (
-    icon_chart,
-    icon_check,
-    icon_clipboard,
-    icon_clock,
-    icon_lock,
-    icon_note,
-    icon_tag,
-    icon_warning,
-)
 from src.envs import API, EVAL_RESULTS_PATH, RESULTS_REPO, TOKEN
 from src.submission.check_validity import validate_goai_json
 from src.tasks import TASK_CONFIGS, Domain, Language, get_metric_keys, size_category_from_b
@@ -80,7 +70,7 @@ def generate_preview_html(data: Dict[str, Any]) -> str:
     header = f"""
     <div class="preview-card">
         <div class="preview-header">
-            <h3><span class="preview-h3-icon">{icon_clipboard(20)}</span> {model_id}</h3>
+            <h3>📋 {model_id}</h3>
             <div class="preview-badges">
                 <span class="preview-badge task">{task.upper()}</span>
                 <span class="preview-badge lang">{lang_name}</span>
@@ -90,7 +80,7 @@ def generate_preview_html(data: Dict[str, Any]) -> str:
     """
 
     avg = data.get("average", {})
-    avg_html = f"<div class='preview-section'><h4><span class='preview-h4-icon'>{icon_chart(18)}</span> Average Metrics / Métriques moyennes</h4><div class='metric-grid'>"
+    avg_html = "<div class='preview-section'><h4>📊 Average Metrics / Métriques moyennes</h4><div class='metric-grid'>"
     if cfg:
         for mk in get_metric_keys(task):
             val = avg.get(mk)
@@ -104,7 +94,7 @@ def generate_preview_html(data: Dict[str, Any]) -> str:
     groups = data.get("groups", {})
     domain_html = ""
     if groups:
-        domain_html = f"<div class='preview-section'><h4><span class='preview-h4-icon'>{icon_tag(18)}</span> Per-Domain Results / Résultats par domaine</h4>"
+        domain_html = "<div class='preview-section'><h4>🏷️ Per-Domain Results / Résultats par domaine</h4>"
         domain_html += "<table class='preview-table'><thead><tr><th>Domain</th><th>N</th>"
         if cfg:
             for mk in get_metric_keys(task):
@@ -126,8 +116,8 @@ def generate_preview_html(data: Dict[str, Any]) -> str:
     ts = data.get("timestamp", "")[:19]
     footer = f"""
         <div class="preview-footer">
-            <span>{icon_note(16)} {samples} samples</span>
-            <span>{icon_clock(16)} {ts}</span>
+            <span>📝 {samples} samples</span>
+            <span>🕐 {ts}</span>
         </div>
     </div>
     """
@@ -145,9 +135,7 @@ def submit_result(
     profile: Optional[gr.OAuthProfile] = None,
 ) -> str:
     if profile is None:
-        return styled_error(
-            f"{icon_lock(18)} HuggingFace login required / Connexion HuggingFace requise"
-        )
+        return styled_error("🔒 HuggingFace login required / Connexion HuggingFace requise")
 
     if json_file is None:
         return styled_error("Please upload a JSON result file / Veuillez uploader un fichier JSON")
@@ -172,7 +160,7 @@ def submit_result(
     fp = _result_fingerprint(data)
     if fp in _existing_fingerprints():
         return styled_error(
-            f"{icon_warning(18)} Duplicate submission detected — these exact results have already been submitted.<br>"
+            "⚠️ Duplicate submission detected — these exact results have already been submitted.<br>"
             "Soumission en doublon détectée — ces résultats identiques ont déjà été soumis."
         )
 
@@ -218,8 +206,8 @@ def submit_result(
         )
 
     return styled_message(
-        f"{icon_check(18)} Result submitted successfully! / Résultat soumis avec succès !<br>"
+        f"✅ Result submitted successfully! / Résultat soumis avec succès !<br>"
         f"Model: {data['model_id']} | Task: {task.upper()} | Language: {lang}<br><br>"
-        f"{icon_clock(18)} The leaderboard will be automatically updated within {REFRESH_INTERVAL_MIN} minutes.<br>"
+        f"⏳ The leaderboard will be automatically updated within {REFRESH_INTERVAL_MIN} minutes.<br>"
         f"Le classement sera automatiquement mis à jour dans {REFRESH_INTERVAL_MIN} minutes."
     )

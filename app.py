@@ -15,12 +15,12 @@ from src.about import (
     DIOULA_GUIDE_FR,
     INFO_TEXT_EN,
     INFO_TEXT_FR,
-    LEADERBOARD_INTRO_HTML,
+    LEADERBOARD_INTRO_EN,
+    LEADERBOARD_INTRO_FR,
     MOORE_GUIDE_EN,
     MOORE_GUIDE_FR,
     MT_GUIDE_EN,
     MT_GUIDE_FR,
-    SUBMISSION_LOGIN_HINT_HTML,
     SUBMISSION_TEXT_EN,
     SUBMISSION_TEXT_FR,
     TASKS_TEXT_EN,
@@ -152,7 +152,17 @@ def create_leaderboard_tab(task_id, language_code, mt_pair=None):
     guide_en, guide_fr = task_guide.get(task_id, ("", ""))
 
     with gr.Column():
-        gr.Markdown(guide_en + "\n\n" + guide_fr, elem_classes="guide-text")
+        with gr.Row(elem_classes="goai-bilingual-row"):
+            with gr.Column(scale=1):
+                gr.Markdown(
+                    '<p class="goai-lang-label">EN</p>\n\n' + guide_en.strip(),
+                    elem_classes="guide-text",
+                )
+            with gr.Column(scale=1):
+                gr.Markdown(
+                    '<p class="goai-lang-label">FR</p>\n\n' + guide_fr.strip(),
+                    elem_classes="guide-text",
+                )
 
         with gr.Row(elem_classes="filter-row"):
             domain_dd = gr.Dropdown(
@@ -203,7 +213,7 @@ def create_leaderboard_tab(task_id, language_code, mt_pair=None):
 
         table = gr.Dataframe(
             value=display_df,
-            datatype=["html", "markdown", "str", "str", "str", "str"]
+            datatype=["str", "markdown", "str", "str", "str", "str"]
             + ["number"] * max(len(visible_cols) - 8, 0)
             + ["number", "str"],
             interactive=False,
@@ -242,7 +252,11 @@ def create_submission_tab():
     with gr.Row():
         with gr.Column():
             gr.LoginButton(elem_id="oauth-button")
-            gr.HTML(SUBMISSION_LOGIN_HINT_HTML)
+            gr.Markdown(
+                "*🔒 Please sign in with HuggingFace before submitting. / "
+                "Veuillez vous connecter avec HuggingFace avant de soumettre.*",
+                elem_classes="guide-text",
+            )
 
     with gr.Row():
         with gr.Column(scale=1):
@@ -326,18 +340,28 @@ with demo:
     with gr.Tabs(elem_classes="tab-buttons") as main_tabs:
         # ===== LEADERBOARD TAB =====
         with gr.TabItem("🏅 Leaderboard", id=1):
-            gr.HTML(LEADERBOARD_INTRO_HTML)
+            with gr.Row(elem_classes="goai-bilingual-row"):
+                with gr.Column(scale=1):
+                    gr.Markdown(
+                        '<p class="goai-lang-label">EN</p>\n\n' + LEADERBOARD_INTRO_EN.strip(),
+                        elem_classes="guide-text",
+                    )
+                with gr.Column(scale=1):
+                    gr.Markdown(
+                        '<p class="goai-lang-label">FR</p>\n\n' + LEADERBOARD_INTRO_FR.strip(),
+                        elem_classes="guide-text",
+                    )
 
             with gr.Tabs(elem_classes="tab-buttons") as lang_tabs:
                 # ----- Mooré -----
-                with gr.TabItem("Mooré (mos)", id=10):
+                with gr.TabItem("🇧🇫 Mooré (mos)", id=10):
                     # gr.Markdown(MOORE_GUIDE_EN + "\n" + MOORE_GUIDE_FR, elem_classes="guide-text")
 
                     with gr.Tabs(elem_classes="tab-buttons") as mos_task_tabs:
                         with gr.TabItem("🎤 ASR", id=101):
                             create_leaderboard_tab("asr", "mos_Latn")
 
-                        with gr.TabItem("MT: FR → Mooré", id=102):
+                        with gr.TabItem("🔄 MT: FR → Mooré", id=102):
                             create_leaderboard_tab("mt", "mos_Latn", "fra_Latn_mos_Latn")
 
                         with gr.TabItem("🔄 MT: Mooré → FR", id=103):
@@ -347,7 +371,7 @@ with demo:
                             create_leaderboard_tab("tts", "mos_Latn")
 
                 # ----- Dioula -----
-                with gr.TabItem("Dioula (dyu)", id=11):
+                with gr.TabItem("🇧🇫 Dioula (dyu)", id=11):
                     # gr.Markdown(DIOULA_GUIDE_EN + "\n" + DIOULA_GUIDE_FR, elem_classes="guide-text")
 
                     with gr.Tabs(elem_classes="tab-buttons") as dyu_task_tabs:
@@ -363,26 +387,26 @@ with demo:
         # ===== INFO TAB =====
         with gr.TabItem("💡 Info", id=2):
             with gr.Tabs(elem_classes="tab-buttons"):
-                with gr.TabItem("English", id=21):
+                with gr.TabItem("🇬🇧 English", id=21):
                     gr.Markdown(INFO_TEXT_EN, elem_classes="docs-content")
-                with gr.TabItem("Français", id=22):
+                with gr.TabItem("🇫🇷 Français", id=22):
                     gr.Markdown(INFO_TEXT_FR, elem_classes="docs-content")
 
         # ===== TASKS TAB =====
         with gr.TabItem("📝 Tasks / Tâches", id=3):
             with gr.Tabs(elem_classes="tab-buttons"):
-                with gr.TabItem("English", id=31):
+                with gr.TabItem("🇬🇧 English", id=31):
                     gr.Markdown(TASKS_TEXT_EN, elem_classes="docs-content")
-                with gr.TabItem("Français", id=32):
+                with gr.TabItem("🇫🇷 Français", id=32):
                     gr.Markdown(TASKS_TEXT_FR, elem_classes="docs-content")
 
         # ===== SUBMIT TAB =====
         with gr.TabItem("🚀 Submit Results / Soumettre", id=4):
             with gr.Tabs(elem_classes="tab-buttons"):
-                with gr.TabItem("English", id=41):
+                with gr.TabItem("🇬🇧 English", id=41):
                     gr.Markdown(SUBMISSION_TEXT_EN, elem_classes="docs-content")
                     create_submission_tab()
-                with gr.TabItem("Français", id=42):
+                with gr.TabItem("🇫🇷 Français", id=42):
                     gr.Markdown(SUBMISSION_TEXT_FR, elem_classes="docs-content")
                     gr.Markdown(
                         "*Utilisez le formulaire dans l'onglet English ci-dessus / "
