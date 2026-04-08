@@ -1,22 +1,29 @@
-TITLE = """
+from src.display.icons import HF_LOGO_SVG, LINKEDIN_LOGO_SVG, icon_lock, icon_medals_row
+
+TITLE = f"""
 <div class="goai-header">
     <h1>GO AI Bench Leaderboard</h1>
     <p class="goai-subtitle">Open benchmarking leaderboard for NLP models on Burkinab&egrave; languages &mdash; Moor&eacute; &amp; Dioula<br>
     ASR &middot; MT &middot; TTS &mdash; across Health, Education, Child Protection &amp; Environment domains</p>
     <div class="goai-links">
-        <a href="https://github.com/GO-AI-CORPORATION/goai-bench" target="_blank">
-            <svg class="link-icon" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        <a href="https://github.com/GO-AI-CORPORATION/goai-bench" target="_blank" rel="noopener noreferrer">
+            <svg class="link-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
             GitHub Toolkit
         </a>
         <span class="link-sep">&middot;</span>
-        <a href="https://huggingface.co/goaicorp" target="_blank">
-            <svg class="link-icon" viewBox="0 0 120 120" fill="currentColor"><path d="M37.6 75.7c-1.4 0-2.6-1.5-2.6-3.3 0-1.8 1.2-3.3 2.6-3.3 1.4 0 2.6 1.5 2.6 3.3 0 1.8-1.2 3.3-2.6 3.3zM82.4 75.7c-1.4 0-2.6-1.5-2.6-3.3 0-1.8 1.2-3.3 2.6-3.3 1.4 0 2.6 1.5 2.6 3.3 0 1.8-1.2 3.3-2.6 3.3zM60 10C31.4 10 8 33.4 8 62c0 28.6 23.4 52 52 52s52-23.4 52-52c0-28.6-23.4-52-52-52zm30.5 67.5c-.3 1.5-1.4 2.7-2.8 3.3-.2.1-.4.1-.6.2 0 .1 0 .3-.1.4-1 4.5-5.7 7.9-11.3 7.9-3.7 0-7-1.6-9.2-4.1-.3-.4-.7-.8-1-.8h-10.9c-.3 0-.7.5-1 .8-2.2 2.5-5.5 4.1-9.2 4.1-5.6 0-10.3-3.4-11.3-7.9 0-.1 0-.3-.1-.4-.2-.1-.4-.1-.6-.2-1.4-.6-2.4-1.8-2.8-3.3-.5-2 .6-4.1 2.6-4.9 0 0 .1 0 .1-.1.3-5.8 3.7-10.8 8.6-13.2-.5-.7-.8-1.5-.8-2.4 0-2.3 1.9-4.2 4.2-4.2.7 0 1.3.2 1.9.5 3.4-2 7.4-3.1 11.7-3.1s8.3 1.1 11.7 3.1c.6-.3 1.2-.5 1.9-.5 2.3 0 4.2 1.9 4.2 4.2 0 .9-.3 1.7-.8 2.4 4.9 2.4 8.3 7.3 8.6 13.2 0 0 .1 0 .1.1 2 .8 3.1 2.9 2.6 4.9z"/></svg>
+        <a href="https://huggingface.co/goaicorp" target="_blank" rel="noopener noreferrer">
+            {HF_LOGO_SVG}
             HuggingFace
         </a>
         <span class="link-sep">&middot;</span>
-        <a href="https://goaicorporation.org/" target="_blank">
-            <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <a href="https://goaicorporation.org/" target="_blank" rel="noopener noreferrer">
+            <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             GO AI Corp
+        </a>
+        <span class="link-sep">&middot;</span>
+        <a href="https://www.linkedin.com/company/go-ai-corporation" target="_blank" rel="noopener noreferrer">
+            {LINKEDIN_LOGO_SVG}
+            LinkedIn
         </a>
     </div>
     <img class="goai-logo" src="https://raw.githubusercontent.com/GO-AI-CORPORATION/goai-bench/af2c55e7db8d6275337da4b4bbeb73beb3804628/assets/go-ai-bench-logo.png" alt="GO AI Bench" />
@@ -25,16 +32,26 @@ TITLE = """
 
 # ====================== LEADERBOARD GUIDES ======================
 
-LEADERBOARD_INTRO_EN = """
-**Welcome to the GO AI Bench Leaderboard!** Browse and compare models benchmarked on Mooré and Dioula across ASR, MT, and TTS tasks.
+_medals = icon_medals_row()
 
-**How to use:** Select a language tab below, then a task sub-tab. Use the filters to narrow results by domain, model type, architecture, or size. Click column headers to sort. The 🥇🥈🥉 medals highlight the top 3 models.
+LEADERBOARD_INTRO_HTML = f"""
+<div class="bilingual-intro guide-text">
+    <div class="bilingual-col bilingual-col-en">
+        <p><strong>Welcome to the GO AI Bench Leaderboard!</strong> Browse and compare models benchmarked on Moor&eacute; and Dioula across ASR, MT, and TTS tasks.</p>
+        <p><strong>How to use:</strong> Select a language tab below, then a task sub-tab. Use the filters to narrow results by domain, model type, architecture, or size. Click column headers to sort. The {_medals} markers highlight the top 3 models.</p>
+    </div>
+    <div class="bilingual-col bilingual-col-fr">
+        <p><strong>Bienvenue sur le classement GO AI Bench !</strong> Parcourez et comparez les mod&egrave;les &eacute;valu&eacute;s sur le Moor&eacute; et le Dioula pour les t&acirc;ches ASR, TA et STT.</p>
+        <p><strong>Comment utiliser :</strong> S&eacute;lectionnez un onglet de langue ci-dessous, puis un sous-onglet de t&acirc;che. Utilisez les filtres pour affiner par domaine, type de mod&egrave;le, architecture ou taille. Cliquez sur les en-t&ecirc;tes de colonnes pour trier. Les marqueurs {_medals} mettent en avant les 3 meilleurs mod&egrave;les.</p>
+    </div>
+</div>
 """
 
-LEADERBOARD_INTRO_FR = """
-**Bienvenue sur le classement GO AI Bench !** Parcourez et comparez les modèles évalués sur le Mooré et le Dioula pour les tâches ASR, TA et STT.
-
-**Comment utiliser :** Sélectionnez un onglet de langue ci-dessous, puis un sous-onglet de tâche. Utilisez les filtres pour affiner par domaine, type de modèle, architecture ou taille. Cliquez sur les en-têtes de colonnes pour trier. Les médailles 🥇🥈🥉 mettent en avant les 3 meilleurs modèles.
+SUBMISSION_LOGIN_HINT_HTML = f"""
+<div class="guide-text submission-login-hint">
+    {icon_lock(18)}
+    <span><em>Please sign in with HuggingFace before submitting. / Veuillez vous connecter avec HuggingFace avant de soumettre.</em></span>
+</div>
 """
 
 MOORE_GUIDE_EN = """
