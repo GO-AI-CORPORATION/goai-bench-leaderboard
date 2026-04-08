@@ -99,9 +99,18 @@ custom_css = """
     font-weight: 600 !important;
     border-radius: 8px 8px 0 0 !important;
     padding: 10px 18px !important;
+    border-bottom: 2px solid transparent !important;
+    background: #f9fafb !important;
+    margin-right: 2px !important;
+}
+.tab-buttons button:hover {
+    background: #eef2ff !important;
+    border-bottom: 2px solid var(--goai-blue) !important;
 }
 .tab-buttons button.selected {
-    border-bottom: 3px solid var(--goai-yellow) !important;
+    background: #ffffff !important;
+    border-bottom: 3px solid var(--goai-blue) !important;
+    color: var(--goai-blue) !important;
 }
 
 /* ===== Guide text blocks (between tabs) ===== */
@@ -392,9 +401,11 @@ table th:first-child {
     background: var(--goai-blue-dark) !important;
     color: white !important;
 }
-#oauth-button svg,
+#oauth-button svg {
+    filter: none !important;
+}
 #oauth-button img {
-    filter: brightness(0) invert(1);
+    filter: none !important;
 }
 
 /* ===== Hide last dummy column ===== */

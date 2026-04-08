@@ -45,6 +45,16 @@ from src.tasks import (
 )
 
 
+print("=" * 50, flush=True)
+print(f"SPACE_ID          = {os.environ.get('SPACE_ID', '(not set)')}", flush=True)
+print(f"OAUTH_CLIENT_ID   = {'set' if os.environ.get('OAUTH_CLIENT_ID') else '(not set)'}", flush=True)
+print(f"OAUTH_CLIENT_SECRET = {'set' if os.environ.get('OAUTH_CLIENT_SECRET') else '(not set)'}", flush=True)
+print(f"OAUTH_SCOPES      = {os.environ.get('OAUTH_SCOPES', '(not set)')}", flush=True)
+print(f"OPENID_PROVIDER_URL = {os.environ.get('OPENID_PROVIDER_URL', '(not set)')}", flush=True)
+print(f"HF_TOKEN/TOKEN    = {'set' if TOKEN else '(not set)'}", flush=True)
+print("=" * 50, flush=True)
+
+
 def restart_space():
     API.restart_space(repo_id=REPO_ID)
 

@@ -81,10 +81,10 @@ INFO_TEXT_EN = """
 
 ### Supported Languages
 
-| Language | ISO 639-3 | Script | Region | Speakers |
-|----------|-----------|--------|--------|----------|
-| **Mooré** | `mos` | Latin | Burkina Faso, Ghana, Togo | ~8M |
-| **Dioula** | `dyu` | Latin | Burkina Faso, Côte d'Ivoire, Mali | ~12M |
+| Language | ISO 639-3 | Script | Region | Speakers | Description |
+|----------|-----------|--------|--------|----------|-------------|
+| **Mooré** | `mos` | Latin | Burkina Faso, Ghana, Togo | ~8M | Dominant language of Burkina Faso. Gur (Oti-Volta) family. |
+| **Dioula** | `dyu` | Latin | Burkina Faso, Côte d'Ivoire, Mali | ~12M | Major lingua franca of West Africa. Also known as Dyula/Jula. Mande family. |
 
 ### Evaluation Tasks
 
@@ -123,10 +123,10 @@ INFO_TEXT_FR = """
 
 ### Langues supportées
 
-| Langue | ISO 639-3 | Script | Région | Locuteurs |
-|--------|-----------|--------|--------|-----------|
-| **Mooré** | `mos` | Latin | Burkina Faso, Ghana, Togo | ~8M |
-| **Dioula** | `dyu` | Latin | Burkina Faso, Côte d'Ivoire, Mali | ~12M |
+| Langue | ISO 639-3 | Script | Région | Locuteurs | Description |
+|--------|-----------|--------|--------|-----------|-------------|
+| **Mooré** | `mos` | Latin | Burkina Faso, Ghana, Togo | ~8M | Langue dominante du Burkina Faso. Famille Gur (Oti-Volta). |
+| **Dioula** | `dyu` | Latin | Burkina Faso, Côte d'Ivoire, Mali | ~12M | Langue véhiculaire majeure d'Afrique de l'Ouest. Aussi connue sous le nom de Dyula/Jula. Famille Mandé. |
 
 ### Tâches d'évaluation
 
