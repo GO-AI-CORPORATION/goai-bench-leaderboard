@@ -258,11 +258,7 @@ custom_css = """
     background: rgba(205, 127, 50, 0.12) !important;
 }
 
-/*
- * Gradio 5 DataFrame: the ⋮ menu uses .cell-menu-button with display:none except on
- * th:hover or th.focus. Clicking the button moves focus off <th>, so the button
- * vanishes. Keep it visible with focus-within / menu-open, and style for blue headers.
- */
+/* Gradio 5 DataFrame: .cell-menu-button visibility = default (hover / th.focus only). */
 #llm-benchmark-tab-table .table-wrap {
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch;
@@ -293,8 +289,8 @@ custom_css = """
     background-color: rgba(255, 255, 255, 0.35) !important;
     color: #ffffff !important;
 }
+/* Style du ⋮ uniquement quand Gradio l’affiche (hover / focus colonne) — pas de display forcé */
 #llm-benchmark-tab-table th .cell-menu-button {
-    display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     background-color: rgba(255, 255, 255, 0.22) !important;
@@ -303,15 +299,6 @@ custom_css = """
     font-weight: 700 !important;
     font-size: 14px !important;
     line-height: 1 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-#llm-benchmark-tab-table th:hover .cell-menu-button,
-#llm-benchmark-tab-table th:focus-within .cell-menu-button,
-#llm-benchmark-tab-table .table-wrap.menu-open th .cell-menu-button {
-    display: flex !important;
-    opacity: 1 !important;
-    visibility: visible !important;
 }
 #llm-benchmark-tab-table th .cell-menu-button:hover {
     background-color: rgba(255, 255, 255, 0.4) !important;
