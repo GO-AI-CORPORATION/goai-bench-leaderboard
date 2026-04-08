@@ -9,12 +9,15 @@ TOKEN = os.environ.get("HF_TOKEN") or os.environ.get("TOKEN")
 
 OWNER = "goaicorp"
 REPO_ID = f"{OWNER}/goai-bench-leaderboard"
-QUEUE_REPO = f"{OWNER}/goai-bench-requests"
-RESULTS_REPO = f"{OWNER}/goai-bench-results"
+# One dataset holds both folders: requests/ and results/
+DATA_REPO = f"{OWNER}/goai-bench-submissions"
+REQUESTS_DIR = "requests"
+RESULTS_DIR = "results"
 
 CACHE_PATH = os.getenv("HF_HOME", ".")
-EVAL_REQUESTS_PATH = os.path.join(CACHE_PATH, "eval-queue")
-EVAL_RESULTS_PATH = os.path.join(CACHE_PATH, "eval-results")
+DATA_PATH = os.path.join(CACHE_PATH, "goai-bench-submissions")
+EVAL_REQUESTS_PATH = os.path.join(DATA_PATH, REQUESTS_DIR)
+EVAL_RESULTS_PATH = os.path.join(DATA_PATH, RESULTS_DIR)
 
 SEED_DATA_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "results_final.json")
 

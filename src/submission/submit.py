@@ -7,7 +7,7 @@ from typing import Any, Dict, List, Optional
 import gradio as gr
 
 from src.display.formatting import styled_error, styled_message, styled_warning
-from src.envs import API, EVAL_RESULTS_PATH, RESULTS_REPO, TOKEN
+from src.envs import API, DATA_REPO, EVAL_RESULTS_PATH, RESULTS_DIR, TOKEN
 from src.submission.check_validity import validate_goai_json
 from src.tasks import TASK_CONFIGS, Domain, Language, get_metric_keys, size_category_from_b
 
@@ -194,8 +194,8 @@ def submit_result(
     try:
         API.upload_file(
             path_or_fileobj=out_path,
-            path_in_repo=f"{profile.username}/{filename}",
-            repo_id=RESULTS_REPO,
+            path_in_repo=f"{RESULTS_DIR}/{profile.username}/{filename}",
+            repo_id=DATA_REPO,
             repo_type="dataset",
             commit_message=f"Add {data['model_id']} {task} {lang} results",
         )

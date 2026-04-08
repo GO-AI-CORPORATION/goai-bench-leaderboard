@@ -30,7 +30,7 @@ from src.about import (
     TTS_GUIDE_FR,
 )
 from src.display.css_html_js import custom_css
-from src.envs import API, EVAL_RESULTS_PATH, REPO_ID, RESULTS_REPO, SEED_DATA_PATH, TOKEN
+from src.envs import API, DATA_PATH, DATA_REPO, EVAL_RESULTS_PATH, REPO_ID, RESULTS_DIR, SEED_DATA_PATH, TOKEN
 from src.leaderboard.read_evals import load_all_results
 from src.populate import build_leaderboard_df, get_unique_values
 from src.submission.submit import generate_preview_html, submit_result
@@ -62,9 +62,10 @@ def restart_space():
 
 try:
     snapshot_download(
-        repo_id=RESULTS_REPO,
-        local_dir=EVAL_RESULTS_PATH,
+        repo_id=DATA_REPO,
+        local_dir=DATA_PATH,
         repo_type="dataset",
+        allow_patterns=[f"{RESULTS_DIR}/**"],
         tqdm_class=None,
         etag_timeout=10,
         token=TOKEN,
