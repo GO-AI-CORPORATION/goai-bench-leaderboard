@@ -53,6 +53,11 @@ custom_css = """
 }
 
 /* ===== Header ===== */
+.gradio-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
 .goai-header {
     text-align: center;
     padding: 28px 30px 20px 30px;
@@ -94,21 +99,21 @@ custom_css = """
 }
 
 /* ===== Tab styling ===== */
-.tab-buttons button {
+.tab-buttons > .tab-nav button {
     font-size: 15px !important;
     font-weight: 600 !important;
     border-radius: 8px 8px 0 0 !important;
     padding: 10px 18px !important;
     border-bottom: 2px solid transparent !important;
-    background: #f9fafb !important;
+    background: #f0f1f3 !important;
     margin-right: 2px !important;
 }
-.tab-buttons button:hover {
-    background: #eef2ff !important;
+.tab-buttons > .tab-nav button:hover {
+    background: #e3e8f0 !important;
     border-bottom: 2px solid var(--goai-blue) !important;
 }
-.tab-buttons button.selected {
-    background: #ffffff !important;
+.tab-buttons > .tab-nav button.selected {
+    background: #dce6f5 !important;
     border-bottom: 3px solid var(--goai-blue) !important;
     color: var(--goai-blue) !important;
 }
