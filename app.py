@@ -46,6 +46,7 @@ from src.tasks import (
 
 
 print("=" * 50, flush=True)
+print(f"SYSTEM            = {os.environ.get('SYSTEM', '(not set)')}", flush=True)
 print(f"SPACE_ID          = {os.environ.get('SPACE_ID', '(not set)')}", flush=True)
 print(f"OAUTH_CLIENT_ID   = {'set' if os.environ.get('OAUTH_CLIENT_ID') else '(not set)'}", flush=True)
 print(f"OAUTH_CLIENT_SECRET = {'set' if os.environ.get('OAUTH_CLIENT_SECRET') else '(not set)'}", flush=True)

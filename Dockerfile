@@ -20,7 +20,8 @@ USER appuser
 ENV PYTHONUNBUFFERED=1 \
     GRADIO_SERVER_NAME=0.0.0.0 \
     GRADIO_SERVER_PORT=7860 \
-    HF_HOME=/app
+    HF_HOME=/app \
+    SYSTEM=spaces
 
 EXPOSE 7860
 
