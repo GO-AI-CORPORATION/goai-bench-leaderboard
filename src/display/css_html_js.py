@@ -52,17 +52,24 @@ custom_css = """
     --block-shadow: none !important;
 }
 
-/* ===== Fixed app width ===== */
+/* ===== App width: max-width only (responsive like default Gradio / template) ===== */
 .gradio-container {
     max-width: 1200px !important;
     min-width: 0 !important;
-    width: 1200px !important;
+    width: 100% !important;
     margin: 0 auto !important;
+    box-sizing: border-box !important;
 }
 @media (max-width: 1240px) {
     .gradio-container {
-        width: 100% !important;
-        padding: 0 16px !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+}
+@media (max-width: 480px) {
+    .gradio-container {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
     }
 }
 
@@ -79,6 +86,23 @@ custom_css = """
     font-weight: 800;
     margin: 0 0 8px 0;
     letter-spacing: -0.5px;
+}
+@media (max-width: 640px) {
+    .goai-header {
+        padding: 20px 12px 16px 12px !important;
+    }
+    .goai-header h1 {
+        font-size: 26px !important;
+    }
+    .goai-header .goai-subtitle {
+        font-size: 15px !important;
+    }
+    .goai-header .goai-logo {
+        max-height: 88px !important;
+    }
+    .goai-header .goai-links {
+        font-size: 13px !important;
+    }
 }
 .goai-header .goai-subtitle {
     color: #444 !important;
@@ -186,6 +210,12 @@ custom_css = """
     background: #dce6f5 !important;
     color: var(--goai-blue) !important;
 }
+@media (max-width: 640px) {
+    .tab-buttons .tab-container > button {
+        font-size: 13px !important;
+        padding: 0 10px !important;
+    }
+}
 
 /* ===== Guide text blocks (between tabs) ===== */
 .guide-text {
@@ -226,6 +256,76 @@ custom_css = """
 }
 #llm-benchmark-tab-table table tbody tr:nth-child(3) {
     background: rgba(205, 127, 50, 0.12) !important;
+}
+
+/*
+ * Gradio 5 DataFrame: the ⋮ menu uses .cell-menu-button with display:none except on
+ * th:hover or th.focus. Clicking the button moves focus off <th>, so the button
+ * vanishes. Keep it visible with focus-within / menu-open, and style for blue headers.
+ */
+#llm-benchmark-tab-table .table-wrap {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+}
+#llm-benchmark-tab-table th {
+    background: var(--goai-blue) !important;
+    color: #ffffff !important;
+}
+#llm-benchmark-tab-table th .header-button {
+    color: #ffffff !important;
+}
+#llm-benchmark-tab-table th .header-button textarea,
+#llm-benchmark-tab-table th .header-button span,
+#llm-benchmark-tab-table th .header-button .markdown-body {
+    color: #ffffff !important;
+}
+#llm-benchmark-tab-table th .sort-arrow,
+#llm-benchmark-tab-table th .filter-icon {
+    color: #ffffff !important;
+}
+#llm-benchmark-tab-table th .sort-arrow svg,
+#llm-benchmark-tab-table th .filter-icon svg {
+    fill: currentColor !important;
+    color: #ffffff !important;
+}
+#llm-benchmark-tab-table th .sort-priority {
+    background-color: rgba(255, 255, 255, 0.35) !important;
+    color: #ffffff !important;
+}
+#llm-benchmark-tab-table th .cell-menu-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: rgba(255, 255, 255, 0.22) !important;
+    border: 1px solid rgba(255, 255, 255, 0.75) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    line-height: 1 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+#llm-benchmark-tab-table th:hover .cell-menu-button,
+#llm-benchmark-tab-table th:focus-within .cell-menu-button,
+#llm-benchmark-tab-table .table-wrap.menu-open th .cell-menu-button {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+#llm-benchmark-tab-table th .cell-menu-button:hover {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    border-color: #ffffff !important;
+}
+/* Sort/filter dropdown: stay above table content */
+.gradio-container .cell-menu {
+    z-index: 5000 !important;
+}
+.gradio-container .filter-menu {
+    z-index: 5001 !important;
+}
+.gradio-container .filter-menu .background {
+    z-index: 4999 !important;
 }
 
 /* ===== Table ===== */
@@ -275,6 +375,12 @@ table th:first-child {
 .filter-row > div {
     flex: 1;
     min-width: 160px;
+}
+@media (max-width: 640px) {
+    .filter-row > div {
+        flex: 1 1 100% !important;
+        min-width: 0 !important;
+    }
 }
 
 /* ===== Preview card ===== */
