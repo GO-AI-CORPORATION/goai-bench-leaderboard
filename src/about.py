@@ -33,13 +33,13 @@ TITLE = """
 LEADERBOARD_INTRO_EN = """
 **👋 Welcome to the GO AI Bench Leaderboard!** Browse and compare models benchmarked on Mooré and Dioula across ASR, MT, and TTS tasks.
 
-**How to use:** Select a language tab below, then a task sub-tab. Use the filters to narrow results by domain, model type, architecture, or size. Click column headers to sort. The 🥇🥈🥉 medals highlight the top 3 models.
+**How to use:** Select a language tab below, then a task sub-tab. Use the filters to narrow results by domain, model type, architecture, or size. Click column headers to sort.
 """
 
 LEADERBOARD_INTRO_FR = """
 **👋 Bienvenue sur le classement GO AI Bench !** Parcourez et comparez les modèles évalués sur le Mooré et le Dioula pour les tâches ASR, MT et TTS.
 
-**Comment utiliser :** Sélectionnez un onglet de langue ci-dessous, puis un sous-onglet de tâche. Utilisez les filtres pour affiner par domaine, type de modèle, architecture ou taille. Cliquez sur les en-têtes de colonnes pour trier. Les médailles 🥇🥈🥉 mettent en avant les 3 meilleurs modèles.
+**Comment utiliser :** Sélectionnez un onglet de langue ci-dessous, puis un sous-onglet de tâche. Utilisez les filtres pour affiner par domaine, type de modèle, architecture ou taille. Cliquez sur les en-têtes de colonnes pour trier.
 """
 
 MOORE_GUIDE_EN = """
